@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Contact & Book an Appointment | Total Turf & Auto, Topeka KS"
+  description="Contact Total Turf & Auto in Topeka, KS. Call or text (785) 925-4040 or request an auto or diesel repair appointment online. 2700 NW Topeka Blvd, Topeka, KS 66617."
+  active="contact"
+>
+  <!-- ===== Page hero ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="crumbs"><a href="/">Home</a> / <span>Contact</span></p>
+      <h1>Contact &amp; Schedule</h1>
+      <p>Call, text, or send a request &mdash; we'll get your vehicle scheduled and taken care of.</p>
+    </div>
+  </section>
+
+  <!-- ===== Contact + Form ===== -->
+  <section class="section" id="book">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="reveal">
+          <span class="eyebrow">Get In Touch</span>
+          <h2 style="font-size:1.9rem;margin-bottom:8px;">We're Here to Help</h2>
+          <p style="color:var(--muted);margin-bottom:8px;">The fastest way to reach us is a quick call or text. Prefer online? Fill out the form and we'll follow up to confirm your appointment.</p>
+          <div class="info-list">
+            <div class="info-item">
+              <div class="info-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></div>
+              <div><h4>Call or Text</h4><a href="tel:+17859254040">(785) 925-4040</a></div>
+            </div>
+            <div class="info-item">
+              <div class="info-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg></div>
+              <div><h4>Email</h4><a href="mailto:totalturfandauto@gmail.com">totalturfandauto@gmail.com</a></div>
+            </div>
+            <div class="info-item">
+              <div class="info-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><h4>Visit the Shop</h4><p>2700 NW Topeka Blvd, Topeka, KS 66617</p></div>
+            </div>
+            <div class="info-item">
+              <div class="info-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+              <div>
+                <h4>Hours</h4>
+                <div class="hours-row"><span>Monday &ndash; Friday</span><span>8:00 AM &ndash; 5:00 PM</span></div>
+                <div class="hours-row closed"><span>Saturday &ndash; Sunday</span><span>Closed</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="form-card">
+            <h2 style="font-size:1.5rem;margin-bottom:6px;">Request an Appointment</h2>
+            <p style="color:var(--muted);font-size:0.93rem;margin-bottom:20px;">Tell us a little about your vehicle and we'll be in touch to confirm a time.</p>
+
+            <!--
+              FORM SETUP: replace YOUR_FORM_ID below with a form endpoint
+              (e.g. a free Formspree form at https://formspree.io) to receive
+              submissions by email. Until then, the form opens the visitor's
+              email app pre-filled to totalturfandauto@gmail.com.
+            -->
+            <form id="appointment-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+              <div class="form-status" role="status" aria-live="polite"></div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="name">Full Name <span class="req">*</span></label>
+                  <input type="text" id="name" name="name" required autocomplete="name" />
+                </div>
+                <div class="field">
+                  <label for="phone">Phone <span class="req">*</span></label>
+                  <input type="tel" id="phone" name="phone" required autocomplete="tel" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" />
+              </div>
+              <div class="field">
+                <label for="vehicle">Vehicle (Year, Make &amp; Model)</label>
+                <input type="text" id="vehicle" name="vehicle" placeholder="e.g. 2016 Chevy Silverado" />
+              </div>
+              <div class="field">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service">
+                  <option value="">Select a service…</option>
+                  <option>Routine Maintenance / Oil Change</option>
+                  <option>Diesel Repair</option>
+                  <option>Brakes &amp; Tires</option>
+                  <option>Engine Service &amp; Replacement</option>
+                  <option>Vehicle Inspection</option>
+                  <option>Diagnostics &amp; Electrical</option>
+                  <option>Other / Not Sure</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="message">What's Going On? <span class="req">*</span></label>
+                <textarea id="message" name="message" required placeholder="Describe the issue or service you need…"></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--lg" style="width:100%;">Send Request</button>
+              <p class="form-note">Prefer to talk now? Call or text <a href="tel:+17859254040" style="color:var(--green-dark);font-weight:600;">(785) 925-4040</a>.</p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Map ===== -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Find Us</span>
+        <h2>Stop By the Shop</h2>
+        <p>We're on NW Topeka Blvd &mdash; easy to find and ready to help.</p>
+      </div>
+      <div class="reveal">
+        <iframe class="map-embed" title="Total Turf & Auto location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen style="min-height:420px;"
+          src="https://www.google.com/maps?q=2700+NW+Topeka+Blvd,+Topeka,+KS+66617&output=embed"></iframe>
+      </div>
+      <p style="text-align:center;margin-top:20px;">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=2700+NW+Topeka+Blvd,+Topeka,+KS+66617" class="btn btn--primary" target="_blank" rel="noopener">Get Directions</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,14 @@
+---
+// Sticky mobile call/book bar.
+interface Props {
+  bookHref?: string;
+}
+const { bookHref = '/contact#book' } = Astro.props;
+---
+<div class="callbar">
+  <a href="tel:+17859254040" class="btn btn--primary">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
+    Call Now
+  </a>
+  <a href={bookHref} class="btn btn--lime">Book Appointment</a>
+</div>

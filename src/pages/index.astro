@@ -1,0 +1,330 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Total Turf & Auto | Auto & Diesel Repair in Topeka, KS"
+  description="Total Turf & Auto is a full-service auto and diesel repair shop in Topeka, KS. Honest inspections, expert maintenance, engine work and more. Call (785) 925-4040."
+  active="home"
+>
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="hero-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+            Locally owned &amp; trusted in Topeka
+          </span>
+          <h1>Auto &amp; Diesel Repair <span class="accent">Done Right</span> the First Time</h1>
+          <p class="hero-sub">From routine maintenance to engine replacements and diesel work, Total Turf &amp; Auto keeps your vehicle running its best &mdash; with honest pricing and a shop you can trust.</p>
+          <div class="hero-cta">
+            <a href="/contact#book" class="btn btn--primary btn--lg">Request an Appointment</a>
+            <a href="tel:+17859254040" class="btn btn--outline-light btn--lg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
+              (785) 925-4040
+            </a>
+          </div>
+          <div class="hero-trust">
+            <div class="hero-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7z"/></svg>
+              <span><strong>Honest Inspections</strong>We tell you what we find</span>
+            </div>
+            <div class="hero-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+              <span><strong>Diesel Specialists</strong>Cars, trucks &amp; diesels</span>
+            </div>
+            <div class="hero-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
+              <span><strong>Clean, Comfy Shop</strong>A waiting room you'll like</span>
+            </div>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Quick service request">
+          <img src="/assets/img/logo.jpg" alt="Total Turf & Auto" width="88" height="88" />
+          <h3>Get Scheduled Today</h3>
+          <span class="hero-card-tag">Call, text, or request online</span>
+          <ul class="hero-card-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Friendly, no-pressure service</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Thorough multi-point inspections</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Your vehicle returned clean</li>
+          </ul>
+          <a href="/contact#book" class="btn btn--primary">Book Your Appointment</a>
+          <p class="hero-card-note">Mon&ndash;Fri 8AM&ndash;5PM &middot; 2700 NW Topeka Blvd</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Trust strip ===== -->
+  <div class="strip">
+    <div class="container">
+      <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Locally Owned &amp; Operated</span>
+      <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Automotive &amp; Diesel Repair</span>
+      <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Straightforward, Honest Pricing</span>
+      <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Call or Text to Schedule</span>
+    </div>
+  </div>
+
+  <!-- ===== Services ===== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">What We Do</span>
+        <h2>Complete Care for Cars, Trucks &amp; Diesels</h2>
+        <p>One trusted shop for everything your vehicle needs &mdash; from a quick oil change to a full engine replacement.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc-card reveal">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13h2l2-5h10l2 5h2M5 13v5h2M17 13v5h2M7 18h10"/><circle cx="8" cy="13" r="1"/></svg></div>
+          <h3>Routine Maintenance</h3>
+          <p>Oil changes, fluids, filters, tune-ups and factory-scheduled service that keep small problems small.</p>
+          <a href="/services#maintenance" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </article>
+        <article class="svc-card reveal">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.8 2.8-2.6-.7-.7-2.6z"/></svg></div>
+          <h3>Diesel Repair</h3>
+          <p>Diagnostics, maintenance and repairs for diesel trucks &mdash; performance and reliability you can count on.</p>
+          <a href="/services#diesel" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </article>
+        <article class="svc-card reveal">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+          <h3>Brakes &amp; Tires</h3>
+          <p>Brake pads, rotors, tire rotations and alignments so you stop straight and ride smooth.</p>
+          <a href="/services#brakes" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </article>
+        <article class="svc-card reveal">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3v4M15 3v4M5 7h14v5a7 7 0 01-14 0z"/><path d="M9 21h6"/></svg></div>
+          <h3>Engine Service &amp; Replacement</h3>
+          <p>Check-engine diagnostics, repairs and complete engine replacements done by an experienced hand.</p>
+          <a href="/services#engine" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </article>
+        <article class="svc-card reveal">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+          <h3>Vehicle Inspections</h3>
+          <p>A thorough, top-to-bottom look so you know exactly what your vehicle needs &mdash; before it bites you later.</p>
+          <a href="/services#inspections" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </article>
+        <article class="svc-card reveal">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h4l2-7 4 14 3-9 2 4h5"/></svg></div>
+          <h3>Diagnostics &amp; Electrical</h3>
+          <p>Warning lights, batteries, starting and charging issues &mdash; we find the real cause, not just the symptom.</p>
+          <a href="/services#diagnostics" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why choose ===== -->
+  <section class="section section--soft" id="why">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Why Total Turf &amp; Auto</span>
+        <h2>Repairs You Can Trust, People You'll Like</h2>
+        <p>We treat every vehicle &mdash; and every customer &mdash; the way we'd want to be treated.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Honest &amp; Upfront</h3>
+          <p>We explain what we find and what it costs &mdash; no surprises, no upselling.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.8 2.8-2.6-.7-.7-2.6z"/></svg></div>
+          <h3>Skilled Technician</h3>
+          <p>Hands-on expertise across cars, trucks and diesels &mdash; the kind that "checks certain things."</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/><path d="M9 9h.01M9 13h.01M9 17h.01"/></svg></div>
+          <h3>Clean, Comfy Shop</h3>
+          <p>A spotless waiting room and a vehicle returned to you as clean as you left it &mdash; usually cleaner.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/></svg></div>
+          <h3>Local &amp; Community-Driven</h3>
+          <p>A growing Topeka small business that genuinely cares about its neighbors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About teaser ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="split">
+        <div class="split-media reveal">
+          <img src="/assets/img/banner.jpg" alt="Total Turf & Auto — automotive and diesel repair in Topeka, KS" width="768" height="432" />
+          <div class="badge-float">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+            <span><strong>100%</strong>Care in every job</span>
+          </div>
+        </div>
+        <div class="split-body reveal">
+          <span class="eyebrow">Our Story</span>
+          <h2>A Topeka Shop Built on Hard Work &amp; Trust</h2>
+          <p class="lead">Total Turf &amp; Auto started with a simple goal: give Topeka drivers a repair shop they can actually trust.</p>
+          <p>Every vehicle that rolls in gets the same honest attention &mdash; a careful inspection, a clear explanation, and quality work that holds up. We take pride in keeping your vehicle clean, our shop spotless, and our customers comfortable while they wait.</p>
+          <ul class="check-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Owner-operated &mdash; you deal directly with the person doing the work</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Thorough inspections that catch issues before they cost you</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> A comfortable, welcoming waiting room</li>
+          </ul>
+          <p class="scripture">&ldquo;For with God nothing shall be impossible.&rdquo; &mdash; Luke 1:37</p>
+          <a href="/about" class="btn btn--primary">More About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Stats ===== -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat reveal"><strong><span data-count="100" data-suffix="%">0</span></strong><span>Honest assessments</span></div>
+        <div class="stat reveal"><strong><span data-count="2">0</span></strong><span>Repair specialties: auto &amp; diesel</span></div>
+        <div class="stat reveal"><strong><span data-count="5">0</span></strong><span>Days a week, 8AM&ndash;5PM</span></div>
+        <div class="stat reveal"><strong><span data-count="1">0</span></strong><span>Trusted local shop for your vehicle</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Process ===== -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">How It Works</span>
+        <h2>Getting Your Vehicle Fixed Is Simple</h2>
+        <p>Three easy steps from "something's wrong" to back on the road.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step reveal">
+          <h3>1. Reach Out</h3>
+          <p>Call or text (785) 925-4040, or request an appointment online. Tell us what's going on &mdash; we'll get you scheduled.</p>
+        </div>
+        <div class="step reveal">
+          <h3>2. We Inspect &amp; Explain</h3>
+          <p>We diagnose the issue, check the things that matter, and walk you through exactly what your vehicle needs and what it costs.</p>
+        </div>
+        <div class="step reveal">
+          <h3>3. Quality Repair</h3>
+          <p>We do the job right, keep your vehicle clean, and hand back the keys with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Reviews ===== -->
+  <!-- NOTE: Replace the placeholder testimonials below with real Google / Facebook reviews. -->
+  <section class="section section--soft" id="reviews">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Customer Reviews</span>
+        <h2>What Topeka Drivers Are Saying</h2>
+        <p>Real feedback from the community we're proud to serve.</p>
+      </div>
+      <div class="reviews-grid">
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+          </div>
+          <p>"Honest, thorough, and they actually explained what was wrong instead of just handing me a bill. My car came back cleaner than I dropped it off. Highly recommend."</p>
+          <div class="review-author">
+            <span class="review-avatar">A</span>
+            <span><strong>Amanda R.</strong><span>Topeka, KS</span></span>
+          </div>
+        </article>
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+          </div>
+          <p>"Took my diesel truck in and got it back running great. Fair pricing and a clean, comfortable waiting room. You can tell they take pride in their work."</p>
+          <div class="review-author">
+            <span class="review-avatar">M</span>
+            <span><strong>Mike T.</strong><span>Topeka, KS</span></span>
+          </div>
+        </article>
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+          </div>
+          <p>"Finally a local shop I trust. Easy to schedule, friendly, and they didn't try to sell me anything I didn't need. So glad this place opened up."</p>
+          <div class="review-author">
+            <span class="review-avatar">J</span>
+            <span><strong>Jessica L.</strong><span>Topeka, KS</span></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA banner ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div>
+          <h2>Ready to Get Your Vehicle Taken Care Of?</h2>
+          <p>Call or text us today &mdash; we'll get you scheduled and back on the road.</p>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="tel:+17859254040" class="btn btn--white btn--lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
+            (785) 925-4040
+          </a>
+          <a href="/contact#book" class="btn btn--lime btn--lg">Request Appointment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Location ===== -->
+  <section class="section section--soft" id="location">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Find Us</span>
+        <h2>Visit Total Turf &amp; Auto in Topeka</h2>
+        <p>Conveniently located on NW Topeka Blvd &mdash; stop by or schedule ahead.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="info-list">
+            <div class="info-item">
+              <div class="info-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><h4>Address</h4><p>2700 NW Topeka Blvd, Topeka, KS 66617</p></div>
+            </div>
+            <div class="info-item">
+              <div class="info-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></div>
+              <div><h4>Call or Text</h4><a href="tel:+17859254040">(785) 925-4040</a></div>
+            </div>
+            <div class="info-item">
+              <div class="info-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg></div>
+              <div><h4>Email</h4><a href="mailto:totalturfandauto@gmail.com">totalturfandauto@gmail.com</a></div>
+            </div>
+            <div class="info-item">
+              <div class="info-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+              <div>
+                <h4>Hours</h4>
+                <div class="hours-row"><span>Monday &ndash; Friday</span><span>8:00 AM &ndash; 5:00 PM</span></div>
+                <div class="hours-row closed"><span>Saturday &ndash; Sunday</span><span>Closed</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <iframe class="map-embed" title="Total Turf & Auto location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+            src="https://www.google.com/maps?q=2700+NW+Topeka+Blvd,+Topeka,+KS+66617&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

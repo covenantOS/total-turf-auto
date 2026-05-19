@@ -1,0 +1,242 @@
+---
+import '../styles/style.css';
+import TopBar from '../components/TopBar.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CallBar from '../components/CallBar.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  active?: 'home' | 'services' | 'about' | 'contact';
+}
+
+const { title, description, active } = Astro.props;
+const site = Astro.site ?? new URL('https://www.totalturfandauto.com');
+const canonical = new URL(Astro.url.pathname, site).href;
+const ogImage = new URL('/assets/img/banner.jpg', site).href;
+
+const businessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AutoRepair',
+  name: 'Total Turf & Auto',
+  image: ogImage,
+  logo: new URL('/assets/img/logo.jpg', site).href,
+  url: canonical,
+  telephone: '+1-785-925-4040',
+  email: 'totalturfandauto@gmail.com',
+  priceRange: '$$',
+  description:
+    'Full-service auto and diesel repair shop in Topeka, Kansas, offering routine maintenance, vehicle inspections, brake service, engine replacement and diesel repair.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '2700 NW Topeka Blvd',
+    addressLocality: 'Topeka',
+    addressRegion: 'KS',
+    postalCode: '66617',
+    addressCountry: 'US',
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: 39.09, longitude: -95.692 },
+  areaServed: ['Topeka', 'Shawnee County', 'North Topeka', 'Silver Lake', 'Rossville'],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:00',
+      closes: '17:00',
+    },
+  ],
+};
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta name="theme-color" content="#91bb43" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/jpeg" href="/assets/img/logo.jpg" />
+  <link rel="apple-touch-icon" href="/assets/img/logo.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
+  <slot name="schema" />
+</head>
+<body>
+  <TopBar />
+  <Header active={active} />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+  <CallBar />
+
+  <script>
+    (function () {
+      'use strict';
+
+      const header = document.querySelector('.header');
+      if (header) {
+        const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      }
+
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+          const open = nav.classList.toggle('open');
+          toggle.classList.toggle('open', open);
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        nav.addEventListener('click', (e) => {
+          if ((e.target as HTMLElement).tagName === 'A') {
+            nav.classList.remove('open');
+            toggle.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      const reveals = document.querySelectorAll('.reveal');
+      if (reveals.length && 'IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in');
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+        reveals.forEach((el) => io.observe(el));
+      } else {
+        reveals.forEach((el) => el.classList.add('in'));
+      }
+
+      const stats = document.querySelectorAll<HTMLElement>('[data-count]');
+      if (stats.length && 'IntersectionObserver' in window) {
+        const countObs = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              const el = entry.target as HTMLElement;
+              const target = parseFloat(el.getAttribute('data-count') || '0');
+              const suffix = el.getAttribute('data-suffix') || '';
+              const start = performance.now();
+              const dur = 1400;
+              const step = (now: number) => {
+                const p = Math.min((now - start) / dur, 1);
+                const eased = 1 - Math.pow(1 - p, 3);
+                const val = target * eased;
+                el.textContent = (target % 1 === 0 ? Math.round(val) : val.toFixed(1)) + suffix;
+                if (p < 1) requestAnimationFrame(step);
+              };
+              requestAnimationFrame(step);
+              countObs.unobserve(el);
+            });
+          },
+          { threshold: 0.5 }
+        );
+        stats.forEach((el) => countObs.observe(el));
+      }
+
+      document.querySelectorAll('.faq-q').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item') as HTMLElement;
+          const ans = item.querySelector('.faq-a') as HTMLElement;
+          const open = item.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          ans.style.maxHeight = open ? ans.scrollHeight + 'px' : '0';
+        });
+      });
+
+      const form = document.getElementById('appointment-form') as HTMLFormElement | null;
+      if (form) {
+        const status = form.querySelector('.form-status') as HTMLElement;
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          status.className = 'form-status';
+
+          if (!form.checkValidity()) {
+            status.textContent = 'Please fill in all required fields so we can reach you.';
+            status.className = 'form-status err';
+            form.reportValidity();
+            return;
+          }
+
+          const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+          const original = btn.textContent || 'Send Request';
+          btn.disabled = true;
+          btn.textContent = 'Sending…';
+
+          const endpoint = form.getAttribute('action') || '';
+          const notConfigured = !endpoint || endpoint.indexOf('YOUR_FORM_ID') !== -1;
+
+          if (notConfigured) {
+            const data = new FormData(form);
+            const body: string[] = [];
+            data.forEach((v, k) => body.push(k + ': ' + v));
+            window.location.href =
+              'mailto:totalturfandauto@gmail.com' +
+              '?subject=' + encodeURIComponent('Appointment Request — Total Turf & Auto') +
+              '&body=' + encodeURIComponent(body.join('\n'));
+            status.textContent =
+              'Opening your email app to send the request. Prefer to talk now? Call (785) 925-4040.';
+            status.className = 'form-status ok';
+            btn.disabled = false;
+            btn.textContent = original;
+            return;
+          }
+
+          fetch(endpoint, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { Accept: 'application/json' },
+          })
+            .then((res) => {
+              if (res.ok) {
+                form.reset();
+                status.textContent =
+                  "Thanks! Your request is in — we'll reach out shortly to confirm your appointment.";
+                status.className = 'form-status ok';
+              } else {
+                throw new Error('Bad response');
+              }
+            })
+            .catch(() => {
+              status.textContent =
+                "Something went wrong. Please call or text us at (785) 925-4040 and we'll get you scheduled.";
+              status.className = 'form-status err';
+            })
+            .finally(() => {
+              btn.disabled = false;
+              btn.textContent = original;
+            });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

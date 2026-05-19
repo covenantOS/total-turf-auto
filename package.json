@@ -1,0 +1,17 @@
+{
+  "name": "total-turf-auto",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website for Total Turf & Auto — automotive & diesel repair in Topeka, KS.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.6.1",
+    "@astrojs/sitemap": "^3.3.0"
+  }
+}
