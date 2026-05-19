@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ReviewCard from '../components/ReviewCard.astro';
-import { featuredReviews } from '../data/reviews.js';
+import { reviews } from '../data/reviews.js';
 
 const galleryImages = [
   { src: 'jeep-engine-out.webp', alt: 'Engine pulled for replacement at Total Turf & Auto in Topeka, KS' },
@@ -32,11 +32,11 @@ const galleryImages = [
           <h1>Auto &amp; Diesel Repair <span class="accent">Done Right</span> the First Time</h1>
           <p class="hero-sub">From routine maintenance to engine replacements and diesel work, Total Turf &amp; Auto keeps your vehicle running its best, with honest pricing and a shop you can trust.</p>
           <div class="hero-cta">
-            <a href="/contact#book" class="btn btn--primary btn--lg">Request an Appointment</a>
-            <a href="tel:+17859254040" class="btn btn--outline-light btn--lg">
+            <a href="tel:+17859254040" class="btn btn--primary btn--lg">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
-              (785) 925-4040
+              Call (785) 925-4040
             </a>
+            <a href="/contact#book" class="hero-cta-link">Or request an appointment online &rsaquo;</a>
           </div>
           <div class="hero-trust">
             <div class="hero-trust-item">
@@ -88,42 +88,42 @@ const galleryImages = [
         <p>One trusted shop for everything your vehicle needs, from a quick oil change to a full engine replacement.</p>
       </div>
       <div class="svc-grid">
-        <article class="svc-card reveal">
+        <a class="svc-card reveal" href="/services/routine-maintenance/">
           <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13h2l2-5h10l2 5h2M5 13v5h2M17 13v5h2M7 18h10"/><circle cx="8" cy="13" r="1"/></svg></div>
           <h3>Routine Maintenance</h3>
           <p>Oil changes, fluids, filters, tune-ups and factory-scheduled service that keep small problems small.</p>
-          <a href="/services#maintenance" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-        </article>
-        <article class="svc-card reveal">
+          <span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+        </a>
+        <a class="svc-card reveal" href="/services/diesel-repair/">
           <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.8 2.8-2.6-.7-.7-2.6z"/></svg></div>
           <h3>Diesel Repair</h3>
           <p>Diagnostics, maintenance and repairs for diesel trucks. Performance and reliability you can count on.</p>
-          <a href="/services#diesel" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-        </article>
-        <article class="svc-card reveal">
+          <span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+        </a>
+        <a class="svc-card reveal" href="/services/brakes-and-tires/">
           <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
           <h3>Brakes &amp; Tires</h3>
           <p>Brake pads, rotors, tire rotations and alignments so you stop straight and ride smooth.</p>
-          <a href="/services#brakes" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-        </article>
-        <article class="svc-card reveal">
+          <span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+        </a>
+        <a class="svc-card reveal" href="/services/engine-service/">
           <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3v4M15 3v4M5 7h14v5a7 7 0 01-14 0z"/><path d="M9 21h6"/></svg></div>
           <h3>Engine Service &amp; Replacement</h3>
           <p>Check-engine diagnostics, repairs and complete engine replacements done by an experienced hand.</p>
-          <a href="/services#engine" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-        </article>
-        <article class="svc-card reveal">
+          <span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+        </a>
+        <a class="svc-card reveal" href="/services/vehicle-inspections/">
           <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
           <h3>Vehicle Inspections</h3>
           <p>A thorough, top-to-bottom look so you know exactly what your vehicle needs before it bites you later.</p>
-          <a href="/services#inspections" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-        </article>
-        <article class="svc-card reveal">
+          <span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+        </a>
+        <a class="svc-card reveal" href="/services/diagnostics-electrical/">
           <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h4l2-7 4 14 3-9 2 4h5"/></svg></div>
           <h3>Diagnostics &amp; Electrical</h3>
           <p>Warning lights, batteries, starting and charging issues. We find the real cause, not just the symptom.</p>
-          <a href="/services#diagnostics" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-        </article>
+          <span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+        </a>
       </div>
     </div>
   </section>
@@ -229,34 +229,37 @@ const galleryImages = [
       </div>
       <div class="steps-grid">
         <div class="step reveal">
-          <h3>1. Reach Out</h3>
+          <h3>Reach Out</h3>
           <p>Call or text (785) 925-4040, or request an appointment online. Tell us what is going on and we will get you scheduled.</p>
         </div>
         <div class="step reveal">
-          <h3>2. We Inspect &amp; Explain</h3>
+          <h3>We Inspect &amp; Explain</h3>
           <p>We diagnose the issue, check the things that matter, and walk you through exactly what your vehicle needs and what it costs.</p>
         </div>
         <div class="step reveal">
-          <h3>3. Quality Repair</h3>
+          <h3>Quality Repair</h3>
           <p>We do the job right, keep your vehicle clean, and hand back the keys with confidence.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Reviews ===== -->
+  <!-- ===== Reviews slider ===== -->
   <section class="section section--soft" id="reviews">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Customer Reviews</span>
         <h2>What Topeka Drivers Are Saying</h2>
-        <p>Honest feedback from the neighbors we are proud to serve.</p>
+        <p>Real feedback from the neighbors we are proud to serve.</p>
       </div>
-      <div class="reviews-grid">
-        {featuredReviews.map((review) => <ReviewCard review={review} />)}
+      <div class="reviews-slider reveal">
+        <button class="slider-btn slider-prev" type="button" aria-label="Previous reviews">&lsaquo;</button>
+        <div class="reviews-track" id="reviews-track">
+          {reviews.map((review) => <ReviewCard review={review} />)}
+        </div>
+        <button class="slider-btn slider-next" type="button" aria-label="Next reviews">&rsaquo;</button>
       </div>
       <div class="reviews-cta reveal">
-        <p>Had a great experience with Ryan and the team?</p>
         <a href="/reviews" class="btn btn--ghost">Read All Reviews</a>
         <a href="https://www.facebook.com/profile.php?id=61580966125252&sk=reviews" class="btn btn--primary" target="_blank" rel="noopener">Review Us on Facebook</a>
       </div>
@@ -322,4 +325,18 @@ const galleryImages = [
       </div>
     </div>
   </section>
+
+  <script>
+    const track = document.getElementById('reviews-track');
+    const prev = document.querySelector('.slider-prev');
+    const next = document.querySelector('.slider-next');
+    if (track && prev && next) {
+      const cardWidth = () => {
+        const first = track.querySelector('.review');
+        return first ? first.getBoundingClientRect().width + 24 : 320;
+      };
+      prev.addEventListener('click', () => track.scrollBy({ left: -cardWidth(), behavior: 'smooth' }));
+      next.addEventListener('click', () => track.scrollBy({ left: cardWidth(), behavior: 'smooth' }));
+    }
+  </script>
 </BaseLayout>

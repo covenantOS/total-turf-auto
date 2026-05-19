@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { services } from '../../data/services.js';
+
+export function getStaticPaths() {
+  return services.map((s) => ({ params: { slug: s.slug }, props: { service: s } }));
+}
+
+const { service } = Astro.props;
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: service.faq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const others = services.filter((s) => s.slug !== service.slug);
+---
+<BaseLayout title={service.metaTitle} description={service.metaDescription} active="services">
+  <script type="application/ld+json" slot="schema" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- ===== Page hero ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="crumbs"><a href="/">Home</a> / <a href="/services">Services</a> / <span>{service.name}</span></p>
+      <h1>{service.name} in Topeka, KS</h1>
+      <p>{service.intro}</p>
+    </div>
+  </section>
+
+  <!-- ===== Photo + Materials ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div class="split-media reveal">
+          <img src={`/assets/img/work/${service.image}`} alt={`${service.name} work at Total Turf & Auto in Topeka, KS`} width="600" height="700" loading="lazy" />
+        </div>
+        <div class="split-body reveal">
+          <span class="eyebrow">What We Use</span>
+          <h2>Quality Parts &amp; Materials</h2>
+          <p>We use the brands and materials we trust on our own vehicles, not the cheapest thing on the shelf.</p>
+          <ul class="check-list">
+            {service.materials.map((m) => (
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                {m}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Vehicle types ===== -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Who We Serve</span>
+        <h2>Vehicles We Work On</h2>
+        <p>If you do not see your vehicle below, call Ryan. Chances are we can help.</p>
+      </div>
+      <div class="why-grid">
+        {service.vehicleTypes.map((v) => (
+          <div class="why-card vehicle-card reveal">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11l1.5-4h11L19 11M5 11h14v6h-2v2h-2v-2H9v2H7v-2H5v-6z"/><circle cx="8" cy="14.5" r="1.2"/><circle cx="16" cy="14.5" r="1.2"/></svg>
+            </div>
+            <h3>{v}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Process & avg times ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">The Process</span>
+        <h2>How a {service.shortName} Job Goes</h2>
+        <p>{service.totalTime}</p>
+      </div>
+      <div class="process-list">
+        {service.process.map((p, i) => (
+          <div class="process-row reveal">
+            <div class="process-num">{i + 1}</div>
+            <div class="process-content">
+              <div class="process-head">
+                <h3>{p.step}</h3>
+                <span class="process-time">{p.time}</span>
+              </div>
+              <p>{p.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div>
+          <h2>Need {service.shortName}?</h2>
+          <p>Call or text Ryan and we will get your vehicle scheduled.</p>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="tel:+17859254040" class="btn btn--white btn--lg">(785) 925-4040</a>
+          <a href="/contact#book" class="btn btn--lime btn--lg">Request Appointment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Good to Know</span>
+        <h2>{service.shortName} Questions</h2>
+      </div>
+      <div class="faq-list">
+        {service.faq.map((f) => (
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">{f.q}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-a"><p>{f.a}</p></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Related services ===== -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Other Services</span>
+        <h2>More From the Shop</h2>
+      </div>
+      <div class="svc-grid">
+        {others.map((s) => (
+          <a class="svc-card reveal" href={`/services/${s.slug}/`}>
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </div>
+            <h3>{s.name}</h3>
+            <p>{s.intro.split('. ')[0]}.</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
