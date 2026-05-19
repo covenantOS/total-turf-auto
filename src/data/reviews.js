@@ -1,0 +1,98 @@
+// Customer reviews for Total Turf & Auto.
+// `source` controls which platform logo shows on the card ('facebook' | 'google').
+// `featured: true` reviews appear on the homepage; all reviews appear on /reviews.
+
+export const reviews = [
+  {
+    name: 'Ridge Freislinger',
+    date: 'May 14, 2026',
+    avatar: 'ridge-freislinger.jpg',
+    source: 'facebook',
+    rating: 5,
+    featured: true,
+    text: "Ryan is the type of mechanic that actually cares about doing things right instead of just throwing parts at a vehicle. Honest, fair, and upfront about what he's comfortable doing and what he isn't. He took the time to diagnose and fix a driveline issue on my F-150 that other people would've probably ignored. Hard to find mechanics like that anymore.",
+  },
+  {
+    name: 'Meticulous Mathis LLC',
+    date: 'April 11, 2026',
+    avatar: 'meticulous-mathis.jpg',
+    source: 'facebook',
+    rating: 5,
+    featured: true,
+    text: "Ryan and his team are truly amazing. Kindest people and really know what they're doing!",
+  },
+  {
+    name: 'Alex Horvath',
+    date: 'March 21, 2026',
+    avatar: 'alex-horvath.jpg',
+    source: 'facebook',
+    rating: 5,
+    featured: true,
+    text: "Ryan really helped me out on an oil change. Had a very rounded over, tightened drain plug I couldn't get off. In no time at all Ryan had that sucker out and my oil changed. He even checked the codes and aired my tires. He was so helpful that he even helped me set up a service plan for my truck to help keep it running. 10/10.",
+  },
+  {
+    name: 'Deborah Bremer',
+    date: 'March 20, 2026',
+    avatar: 'deborah-bremer.jpg',
+    source: 'facebook',
+    rating: 5,
+    featured: true,
+    text: "I went to Total Turf & Auto for the first time today. My coworker recommended it and I had a wonderful experience. Ryan is just great. Did a wonderful job on my car for a very reasonable price. I sat in the comfy little waiting room and he fixed everything. So amazing. Highly recommended.",
+  },
+  {
+    name: 'Lexi Hughes',
+    date: 'March 19, 2026',
+    avatar: 'lexi-hughes.jpg',
+    source: 'facebook',
+    rating: 5,
+    featured: true,
+    text: "Ryan has worked on my vehicles for several years performing various services. He is very knowledgeable, well respected and efficient. Always willing to answer questions and someone you can count on to keep your car reliable. Thank you for all you do!",
+  },
+  {
+    name: 'Adam Thompson',
+    date: 'March 3, 2026',
+    avatar: 'adam-thompson.jpg',
+    source: 'facebook',
+    rating: 5,
+    featured: true,
+    text: "I have had Ryan work on a few different vehicles of mine over the years and always been extremely happy with his work, communication and prices. I highly recommend him as a mechanic and will continue to trust him to work on my cars.",
+  },
+  {
+    name: 'Andrew Kirkevold',
+    date: 'February 16, 2026',
+    avatar: 'andrew-kirkevold.jpg',
+    source: 'facebook',
+    rating: 5,
+    featured: false,
+    text: "Awesome and prompt, I would recommend to anyone. Ryan is an awesome guy and doesn't charge an arm and a leg. Go to him if you want your car looking and running amazing!",
+  },
+  {
+    name: 'Keith Anderson',
+    date: 'February 14, 2026',
+    avatar: 'keith-anderson.jpg',
+    source: 'facebook',
+    rating: 5,
+    featured: false,
+    text: "Excellent work. Will most definitely call him again.",
+  },
+  {
+    name: 'Steven Andy McClure',
+    date: 'February 14, 2026',
+    avatar: 'steven-mcclure.jpg',
+    source: 'facebook',
+    rating: 5,
+    featured: false,
+    text: "Reliable and extremely knowledgeable.",
+  },
+  {
+    name: 'LJ Roberts Sr',
+    date: 'February 14, 2026',
+    avatar: 'lj-roberts.jpg',
+    source: 'facebook',
+    rating: 5,
+    featured: false,
+    text: "Does quality work and is very professional. Highly recommended.",
+  },
+];
+
+export const featuredReviews = reviews.filter((r) => r.featured);

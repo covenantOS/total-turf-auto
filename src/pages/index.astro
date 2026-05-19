@@ -1,5 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ReviewCard from '../components/ReviewCard.astro';
+import { featuredReviews } from '../data/reviews.js';
+
+const galleryImages = [
+  { src: 'jeep-engine-out.webp', alt: 'Engine pulled for replacement at Total Turf & Auto in Topeka, KS' },
+  { src: 'truck-engine-hoist.webp', alt: 'Truck engine on a hoist during a replacement in the Topeka shop' },
+  { src: 'engine-block-camshaft.webp', alt: 'Engine internals during a repair at Total Turf & Auto' },
+  { src: 'classic-v8.webp', alt: 'Rebuilt V8 engine in a classic car at Total Turf & Auto' },
+  { src: 'mini-engine-out.webp', alt: 'Compact car with the engine removed for service in Topeka' },
+  { src: 'engine-subframe.webp', alt: 'Engine and subframe assembly during a repair' },
+  { src: 'transmission-work.webp', alt: 'Underside transmission and driveline work at Total Turf & Auto' },
+  { src: 'engine-timing-detail.webp', alt: 'Timing components exposed during an engine repair in Topeka' },
+];
 ---
 <BaseLayout
   title="Total Turf & Auto | Auto & Diesel Repair in Topeka, KS"
@@ -8,15 +21,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 >
   <!-- ===== Hero ===== -->
   <section class="hero">
+    <img class="hero-bg" src="/assets/img/work/shop-bay-trucks.webp" alt="" aria-hidden="true" fetchpriority="high" width="600" height="700" />
     <div class="container">
       <div class="hero-grid">
         <div class="hero-copy">
           <span class="hero-badge">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-            Locally owned &amp; trusted in Topeka
+            Locally owned and trusted in Topeka
           </span>
           <h1>Auto &amp; Diesel Repair <span class="accent">Done Right</span> the First Time</h1>
-          <p class="hero-sub">From routine maintenance to engine replacements and diesel work, Total Turf &amp; Auto keeps your vehicle running its best &mdash; with honest pricing and a shop you can trust.</p>
+          <p class="hero-sub">From routine maintenance to engine replacements and diesel work, Total Turf &amp; Auto keeps your vehicle running its best, with honest pricing and a shop you can trust.</p>
           <div class="hero-cta">
             <a href="/contact#book" class="btn btn--primary btn--lg">Request an Appointment</a>
             <a href="tel:+17859254040" class="btn btn--outline-light btn--lg">
@@ -31,11 +45,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <div class="hero-trust-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg>
-              <span><strong>Diesel Specialists</strong>Cars, trucks &amp; diesels</span>
+              <span><strong>Diesel Specialists</strong>Cars, trucks and diesels</span>
             </div>
             <div class="hero-trust-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
-              <span><strong>Clean, Comfy Shop</strong>A waiting room you'll like</span>
+              <span><strong>Clean, Comfy Shop</strong>A waiting room you will like</span>
             </div>
           </div>
         </div>
@@ -71,7 +85,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="section-head reveal">
         <span class="eyebrow">What We Do</span>
         <h2>Complete Care for Cars, Trucks &amp; Diesels</h2>
-        <p>One trusted shop for everything your vehicle needs &mdash; from a quick oil change to a full engine replacement.</p>
+        <p>One trusted shop for everything your vehicle needs, from a quick oil change to a full engine replacement.</p>
       </div>
       <div class="svc-grid">
         <article class="svc-card reveal">
@@ -83,7 +97,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <article class="svc-card reveal">
           <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.8 2.8-2.6-.7-.7-2.6z"/></svg></div>
           <h3>Diesel Repair</h3>
-          <p>Diagnostics, maintenance and repairs for diesel trucks &mdash; performance and reliability you can count on.</p>
+          <p>Diagnostics, maintenance and repairs for diesel trucks. Performance and reliability you can count on.</p>
           <a href="/services#diesel" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
         </article>
         <article class="svc-card reveal">
@@ -101,13 +115,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <article class="svc-card reveal">
           <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
           <h3>Vehicle Inspections</h3>
-          <p>A thorough, top-to-bottom look so you know exactly what your vehicle needs &mdash; before it bites you later.</p>
+          <p>A thorough, top-to-bottom look so you know exactly what your vehicle needs before it bites you later.</p>
           <a href="/services#inspections" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
         </article>
         <article class="svc-card reveal">
           <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h4l2-7 4 14 3-9 2 4h5"/></svg></div>
           <h3>Diagnostics &amp; Electrical</h3>
-          <p>Warning lights, batteries, starting and charging issues &mdash; we find the real cause, not just the symptom.</p>
+          <p>Warning lights, batteries, starting and charging issues. We find the real cause, not just the symptom.</p>
           <a href="/services#diagnostics" class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
         </article>
       </div>
@@ -120,23 +134,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="section-head reveal">
         <span class="eyebrow">Why Total Turf &amp; Auto</span>
         <h2>Repairs You Can Trust, People You'll Like</h2>
-        <p>We treat every vehicle &mdash; and every customer &mdash; the way we'd want to be treated.</p>
+        <p>We treat every vehicle, and every customer, the way we would want to be treated.</p>
       </div>
       <div class="why-grid">
         <div class="why-card reveal">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
           <h3>Honest &amp; Upfront</h3>
-          <p>We explain what we find and what it costs &mdash; no surprises, no upselling.</p>
+          <p>We explain what we find and what it costs. No surprises, no upselling.</p>
         </div>
         <div class="why-card reveal">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.8 2.8-2.6-.7-.7-2.6z"/></svg></div>
           <h3>Skilled Technician</h3>
-          <p>Hands-on expertise across cars, trucks and diesels &mdash; the kind that "checks certain things."</p>
+          <p>Hands-on expertise across cars, trucks and diesels. The kind that "checks certain things."</p>
         </div>
         <div class="why-card reveal">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/><path d="M9 9h.01M9 13h.01M9 17h.01"/></svg></div>
           <h3>Clean, Comfy Shop</h3>
-          <p>A spotless waiting room and a vehicle returned to you as clean as you left it &mdash; usually cleaner.</p>
+          <p>A spotless waiting room and a vehicle returned to you as clean as you left it, usually cleaner.</p>
         </div>
         <div class="why-card reveal">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/></svg></div>
@@ -152,7 +166,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="split">
         <div class="split-media reveal">
-          <img src="/assets/img/banner.jpg" alt="Total Turf & Auto — automotive and diesel repair in Topeka, KS" width="768" height="432" />
+          <img src="/assets/img/work/shop-interior.webp" alt="Inside the Total Turf & Auto repair shop in Topeka, KS" width="600" height="700" loading="lazy" />
           <div class="badge-float">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
             <span><strong>100%</strong>Care in every job</span>
@@ -162,15 +176,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <span class="eyebrow">Our Story</span>
           <h2>A Topeka Shop Built on Hard Work &amp; Trust</h2>
           <p class="lead">Total Turf &amp; Auto started with a simple goal: give Topeka drivers a repair shop they can actually trust.</p>
-          <p>Every vehicle that rolls in gets the same honest attention &mdash; a careful inspection, a clear explanation, and quality work that holds up. We take pride in keeping your vehicle clean, our shop spotless, and our customers comfortable while they wait.</p>
+          <p>Every vehicle that rolls in gets the same honest attention: a careful inspection, a clear explanation, and quality work that holds up. We take pride in keeping your vehicle clean, our shop spotless, and our customers comfortable while they wait.</p>
           <ul class="check-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Owner-operated &mdash; you deal directly with the person doing the work</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Owner-operated, so you deal directly with the person doing the work</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Thorough inspections that catch issues before they cost you</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> A comfortable, welcoming waiting room</li>
           </ul>
-          <p class="scripture">&ldquo;For with God nothing shall be impossible.&rdquo; &mdash; Luke 1:37</p>
+          <p class="scripture">"For with God nothing shall be impossible." (Luke 1:37)</p>
           <a href="/about" class="btn btn--primary">More About Us</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Recent work gallery ===== -->
+  <section class="section section--soft" id="recent-work">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Recent Work</span>
+        <h2>A Look Inside the Shop</h2>
+        <p>Real vehicles, real repairs, right here in Topeka.</p>
+      </div>
+      <div class="gallery-grid">
+        {galleryImages.map((img) => (
+          <figure class="gallery-item reveal">
+            <img src={`/assets/img/work/${img.src}`} alt={img.alt} width="600" height="450" loading="lazy" />
+          </figure>
+        ))}
       </div>
     </div>
   </section>
@@ -182,7 +214,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="stat reveal"><strong><span data-count="100" data-suffix="%">0</span></strong><span>Honest assessments</span></div>
         <div class="stat reveal"><strong><span data-count="2">0</span></strong><span>Repair specialties: auto &amp; diesel</span></div>
         <div class="stat reveal"><strong><span data-count="5">0</span></strong><span>Days a week, 8AM&ndash;5PM</span></div>
-        <div class="stat reveal"><strong><span data-count="1">0</span></strong><span>Trusted local shop for your vehicle</span></div>
+        <div class="stat reveal"><strong><span data-count="5" data-suffix="-star">0</span></strong><span>Rated by Topeka drivers</span></div>
       </div>
     </div>
   </section>
@@ -198,7 +230,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="steps-grid">
         <div class="step reveal">
           <h3>1. Reach Out</h3>
-          <p>Call or text (785) 925-4040, or request an appointment online. Tell us what's going on &mdash; we'll get you scheduled.</p>
+          <p>Call or text (785) 925-4040, or request an appointment online. Tell us what is going on and we will get you scheduled.</p>
         </div>
         <div class="step reveal">
           <h3>2. We Inspect &amp; Explain</h3>
@@ -213,57 +245,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- ===== Reviews ===== -->
-  <!-- NOTE: Replace the placeholder testimonials below with real Google / Facebook reviews. -->
   <section class="section section--soft" id="reviews">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Customer Reviews</span>
         <h2>What Topeka Drivers Are Saying</h2>
-        <p>Real feedback from the community we're proud to serve.</p>
+        <p>Honest feedback from the neighbors we are proud to serve.</p>
       </div>
       <div class="reviews-grid">
-        <article class="review reveal">
-          <div class="stars" aria-label="5 out of 5 stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-          </div>
-          <p>"Honest, thorough, and they actually explained what was wrong instead of just handing me a bill. My car came back cleaner than I dropped it off. Highly recommend."</p>
-          <div class="review-author">
-            <span class="review-avatar">A</span>
-            <span><strong>Amanda R.</strong><span>Topeka, KS</span></span>
-          </div>
-        </article>
-        <article class="review reveal">
-          <div class="stars" aria-label="5 out of 5 stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-          </div>
-          <p>"Took my diesel truck in and got it back running great. Fair pricing and a clean, comfortable waiting room. You can tell they take pride in their work."</p>
-          <div class="review-author">
-            <span class="review-avatar">M</span>
-            <span><strong>Mike T.</strong><span>Topeka, KS</span></span>
-          </div>
-        </article>
-        <article class="review reveal">
-          <div class="stars" aria-label="5 out of 5 stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
-          </div>
-          <p>"Finally a local shop I trust. Easy to schedule, friendly, and they didn't try to sell me anything I didn't need. So glad this place opened up."</p>
-          <div class="review-author">
-            <span class="review-avatar">J</span>
-            <span><strong>Jessica L.</strong><span>Topeka, KS</span></span>
-          </div>
-        </article>
+        {featuredReviews.map((review) => <ReviewCard review={review} />)}
+      </div>
+      <div class="reviews-cta reveal">
+        <p>Had a great experience with Ryan and the team?</p>
+        <a href="/reviews" class="btn btn--ghost">Read All Reviews</a>
+        <a href="https://www.facebook.com/profile.php?id=61580966125252&sk=reviews" class="btn btn--primary" target="_blank" rel="noopener">Review Us on Facebook</a>
       </div>
     </div>
   </section>
@@ -274,7 +269,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="cta-banner reveal">
         <div>
           <h2>Ready to Get Your Vehicle Taken Care Of?</h2>
-          <p>Call or text us today &mdash; we'll get you scheduled and back on the road.</p>
+          <p>Call or text us today and we will get you scheduled and back on the road.</p>
         </div>
         <div class="cta-banner-actions">
           <a href="tel:+17859254040" class="btn btn--white btn--lg">
@@ -293,7 +288,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="section-head reveal">
         <span class="eyebrow">Find Us</span>
         <h2>Visit Total Turf &amp; Auto in Topeka</h2>
-        <p>Conveniently located on NW Topeka Blvd &mdash; stop by or schedule ahead.</p>
+        <p>Conveniently located on NW Topeka Blvd. Stop by or schedule ahead.</p>
       </div>
       <div class="contact-grid">
         <div class="reveal">

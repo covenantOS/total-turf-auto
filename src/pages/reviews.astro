@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ReviewCard from '../components/ReviewCard.astro';
+import { reviews } from '../data/reviews.js';
+---
+<BaseLayout
+  title="Customer Reviews | Total Turf & Auto, Topeka KS"
+  description="Read what Topeka drivers say about Total Turf & Auto. Real 5-star reviews of Ryan and the team for honest auto and diesel repair in Topeka, KS."
+>
+  <!-- ===== Page hero ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="crumbs"><a href="/">Home</a> / <span>Reviews</span></p>
+      <h1>Customer Reviews</h1>
+      <p>Real feedback from drivers across Topeka and Shawnee County.</p>
+    </div>
+  </section>
+
+  <!-- ===== All reviews ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="reviews-grid">
+        {reviews.map((review) => <ReviewCard review={review} />)}
+      </div>
+      <div class="reviews-cta reveal">
+        <p>Worked with Ryan and the team? We would love to hear from you.</p>
+        <a href="https://www.facebook.com/profile.php?id=61580966125252&sk=reviews" class="btn btn--primary" target="_blank" rel="noopener">Review Us on Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA banner ===== -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div>
+          <h2>Ready to See Why They Trust Us?</h2>
+          <p>Call or text today and get your vehicle scheduled with Total Turf &amp; Auto.</p>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="tel:+17859254040" class="btn btn--white btn--lg">(785) 925-4040</a>
+          <a href="/contact#book" class="btn btn--lime btn--lg">Request Appointment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

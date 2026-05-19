@@ -189,7 +189,7 @@ const businessSchema = {
           const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
           const original = btn.textContent || 'Send Request';
           btn.disabled = true;
-          btn.textContent = 'Sending…';
+          btn.textContent = 'Sending...';
 
           const endpoint = form.getAttribute('action') || '';
           const notConfigured = !endpoint || endpoint.indexOf('YOUR_FORM_ID') !== -1;
@@ -200,7 +200,7 @@ const businessSchema = {
             data.forEach((v, k) => body.push(k + ': ' + v));
             window.location.href =
               'mailto:totalturfandauto@gmail.com' +
-              '?subject=' + encodeURIComponent('Appointment Request — Total Turf & Auto') +
+              '?subject=' + encodeURIComponent('Appointment Request for Total Turf & Auto') +
               '&body=' + encodeURIComponent(body.join('\n'));
             status.textContent =
               'Opening your email app to send the request. Prefer to talk now? Call (785) 925-4040.';
@@ -219,7 +219,7 @@ const businessSchema = {
               if (res.ok) {
                 form.reset();
                 status.textContent =
-                  "Thanks! Your request is in — we'll reach out shortly to confirm your appointment.";
+                  "Thanks! Your request is in. We'll reach out shortly to confirm your appointment.";
                 status.className = 'form-status ok';
               } else {
                 throw new Error('Bad response');

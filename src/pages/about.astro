@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout
   title="About Total Turf & Auto | Trusted Auto Repair in Topeka, KS"
-  description="Meet Total Turf & Auto — a locally owned auto and diesel repair shop in Topeka, KS built on honest work, thorough inspections and genuine care for the community."
+  description="Meet Total Turf & Auto, a locally owned auto and diesel repair shop in Topeka, KS built on honest work, thorough inspections and genuine care for the community."
   active="about"
 >
   <!-- ===== Page hero ===== -->
@@ -11,16 +11,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <p class="crumbs"><a href="/">Home</a> / <span>About</span></p>
       <h1>About Total Turf &amp; Auto</h1>
-      <p>A Topeka repair shop built on honest work, careful inspections, and a genuine care for the people we serve.</p>
+      <p>A Topeka repair shop built on honest work, careful inspections, and genuine care for the people we serve.</p>
+    </div>
+  </section>
+
+  <!-- ===== Meet the owner ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Meet the Owner</span>
+        <h2>The Name Behind Total Turf &amp; Auto</h2>
+      </div>
+      <div class="owner-card reveal">
+        <p>Ask anyone who has had work done at Total Turf &amp; Auto and you will hear the same name: Ryan. He is the owner, the lead mechanic, and the person who personally stands behind every repair that leaves the shop.</p>
+        <p>Ryan built this shop on a simple idea: treat people honestly, do the work right, and explain things in plain language. Customers do not just mention the shop, they mention Ryan by name, and that tells you everything about how he runs it.</p>
+        <p class="owner-quote">"Ryan is the type of mechanic that actually cares about doing things right instead of just throwing parts at a vehicle. Honest, fair, and upfront. Hard to find mechanics like that anymore."<cite>Ridge F., Total Turf &amp; Auto customer</cite></p>
+        <a href="/contact#book" class="btn btn--primary">Schedule With Ryan</a>
+      </div>
+      <!-- A photo of Ryan can be added here once provided. -->
     </div>
   </section>
 
   <!-- ===== Story ===== -->
-  <section class="section">
+  <section class="section section--soft">
     <div class="container">
       <div class="split">
         <div class="split-media reveal">
-          <img src="/assets/img/banner.jpg" alt="Total Turf & Auto automotive and diesel repair shop in Topeka, KS" width="768" height="432" />
+          <img src="/assets/img/work/corvette-c6-lift.webp" alt="A vehicle up on the lift inside the Total Turf & Auto shop in Topeka, KS" width="600" height="700" loading="lazy" />
           <div class="badge-float">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
             <span><strong>Topeka</strong>Proudly local</span>
@@ -28,34 +45,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div class="split-body reveal">
           <span class="eyebrow">Our Story</span>
-          <h2>Built From the Ground Up &mdash; Right Here in Topeka</h2>
+          <h2>Built From the Ground Up, Right Here in Topeka</h2>
           <p class="lead">Total Turf &amp; Auto is a locally owned automotive and diesel repair shop serving Topeka and the surrounding Shawnee County community.</p>
-          <p>What started as a dream became a real shop with real customers &mdash; and the response from this community has been incredible. Every repair, every honest conversation, and every clean vehicle handed back has been part of a journey we're grateful for.</p>
-          <p>We're a small business that's growing fast, and we don't take that lightly. The encouragement and support of our neighbors is what keeps us going &mdash; and we work every day to earn it.</p>
-          <p class="scripture">&ldquo;For with God nothing shall be impossible.&rdquo; &mdash; Luke 1:37</p>
+          <p>What started as a dream became a real shop with real customers, and the response from this community has been incredible. Every repair, every honest conversation, and every clean vehicle handed back has been part of a journey we are grateful for.</p>
+          <p>We are a small business that is growing fast, and we do not take that lightly. The encouragement and support of our neighbors is what keeps us going, and we work every day to earn it.</p>
+          <p class="scripture">"For with God nothing shall be impossible." (Luke 1:37)</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== Values ===== -->
-  <section class="section section--soft">
+  <section class="section">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">What We Stand For</span>
         <h2>The Values Behind Every Repair</h2>
-        <p>These aren't just words on a website &mdash; they're how we run the shop.</p>
+        <p>These are not just words on a website. They are how we run the shop.</p>
       </div>
       <div class="values-grid">
         <div class="value-card reveal">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
           <h3>Honesty First</h3>
-          <p>We tell you what your vehicle actually needs &mdash; and what it doesn't. You'll always know the cost before we begin.</p>
+          <p>We tell you what your vehicle actually needs, and what it does not. You will always know the cost before we begin.</p>
         </div>
         <div class="value-card reveal">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
           <h3>Thorough Work</h3>
-          <p>A good technician knows to check certain things. We catch the issues that would bite you later &mdash; before they do.</p>
+          <p>A good technician knows to check certain things. We catch the issues that would bite you later, before they do.</p>
         </div>
         <div class="value-card reveal">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg></div>
@@ -65,24 +82,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="value-card reveal">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/></svg></div>
           <h3>Community Minded</h3>
-          <p>We're proud to be part of Topeka &mdash; supporting local, giving back, and treating customers like neighbors.</p>
+          <p>We are proud to be part of Topeka: supporting local, giving back, and treating customers like neighbors.</p>
         </div>
         <div class="value-card reveal">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.8 2.8-2.6-.7-.7-2.6z"/></svg></div>
           <h3>Quality Craftsmanship</h3>
-          <p>From a simple oil change to a full engine replacement, we do the job right &mdash; because our name is on it.</p>
+          <p>From a simple oil change to a full engine replacement, we do the job right, because our name is on it.</p>
         </div>
         <div class="value-card reveal">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg></div>
           <h3>Gratitude &amp; Faith</h3>
-          <p>We're thankful for every customer and every opportunity. We give it our all &mdash; and all the glory to God.</p>
+          <p>We are thankful for every customer and every opportunity. We give it our all, and all the glory to God.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== Why choose ===== -->
-  <section class="section">
+  <section class="section section--soft">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Why Drivers Choose Us</span>
@@ -92,29 +109,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="why-card reveal">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg></div>
           <h3>Owner-Operated</h3>
-          <p>You deal directly with the person doing the work &mdash; not a faceless counter.</p>
+          <p>You deal directly with Ryan, the person doing the work, not a faceless counter.</p>
         </div>
         <div class="why-card reveal">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.8 2.8-2.6-.7-.7-2.6z"/></svg></div>
           <h3>Auto &amp; Diesel</h3>
-          <p>One shop for cars, trucks and diesels &mdash; whatever you drive.</p>
+          <p>One shop for cars, trucks and diesels, whatever you drive.</p>
         </div>
         <div class="why-card reveal">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></div>
           <h3>Easy to Reach</h3>
-          <p>Call or text to schedule &mdash; quick, friendly, no runaround.</p>
+          <p>Call or text to schedule. Quick, friendly, no runaround.</p>
         </div>
         <div class="why-card reveal">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
           <h3>No-Pressure Service</h3>
-          <p>Honest recommendations only &mdash; we'll never sell you what you don't need.</p>
+          <p>Honest recommendations only. We will never sell you what you do not need.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== CTA banner ===== -->
-  <section class="section section--soft">
+  <section class="section">
     <div class="container">
       <div class="cta-banner reveal">
         <div>

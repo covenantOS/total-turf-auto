@@ -1,0 +1,29 @@
+# Total Turf & Auto
+
+> Full-service auto and diesel repair shop in Topeka, Kansas. Locally owned and operated by Ryan, focused on honest inspections, fair pricing, and quality workmanship for cars, trucks, and diesels.
+
+## Business details
+
+- Name: Total Turf & Auto
+- Address: 2700 NW Topeka Blvd, Topeka, KS 66617
+- Phone: (785) 925-4040 (call or text)
+- Email: totalturfandauto@gmail.com
+- Hours: Monday to Friday, 8:00 AM to 5:00 PM
+- Service area: Topeka, Shawnee County, and surrounding Kansas communities
+
+## Services
+
+- [Routine Maintenance](https://www.totalturfandauto.com/services#maintenance): Oil changes, fluids, filters, tune-ups, and factory-scheduled service.
+- [Diesel Repair](https://www.totalturfandauto.com/services#diesel): Diagnostics, maintenance, and repairs for diesel trucks.
+- [Brakes & Tires](https://www.totalturfandauto.com/services#brakes): Brake pads, rotors, tire rotation, balancing, and alignment checks.
+- [Engine Service & Replacement](https://www.totalturfandauto.com/services#engine): Check-engine diagnostics, engine repairs, and complete engine replacement.
+- [Vehicle Inspections](https://www.totalturfandauto.com/services#inspections): Thorough multi-point and pre-purchase inspections.
+- [Diagnostics & Electrical](https://www.totalturfandauto.com/services#diagnostics): Computer diagnostics, battery, starting, charging, and electrical repairs.
+
+## Pages
+
+- [Home](https://www.totalturfandauto.com/)
+- [Services](https://www.totalturfandauto.com/services)
+- [About](https://www.totalturfandauto.com/about)
+- [Reviews](https://www.totalturfandauto.com/reviews)
+- [Contact](https://www.totalturfandauto.com/contact)
