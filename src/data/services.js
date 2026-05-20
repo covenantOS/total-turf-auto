@@ -1,5 +1,6 @@
 // Service catalog. Each entry generates a page at /services/{slug}/.
-// `image` references a file in public/assets/img/work/
+// `image` is the main split image. `midImage` is the wide mid-page banner.
+// `galleryImages` is a 3-photo strip showing real work for the service.
 
 export const services = [
   {
@@ -7,6 +8,12 @@ export const services = [
     name: 'Routine Maintenance',
     shortName: 'Maintenance',
     image: 'oil-change.webp',
+    midImage: { src: 'shop-bay-trucks.webp', alt: 'Vehicles in for service at Total Turf & Auto in Topeka, KS' },
+    galleryImages: [
+      { src: 'shop-interior.webp', alt: 'Inside the Total Turf & Auto repair shop in Topeka' },
+      { src: 'engine-block-camshaft.webp', alt: 'Engine internals during a service job' },
+      { src: 'transmission-work.webp', alt: 'Underside fluid and driveline inspection on the lift' },
+    ],
     metaTitle: 'Routine Maintenance & Oil Changes in Topeka, KS | Total Turf & Auto',
     metaDescription: 'Oil changes, fluid service, and scheduled maintenance in Topeka, KS. Ryan runs every job himself at the NW Topeka Blvd shop. Call to book.',
     intro: 'Routine service is the cheapest insurance you can buy on a vehicle. Ryan handles oil changes, fluid flushes, and scheduled service for daily drivers all over Topeka and Shawnee County, from short commutes on Topeka Blvd to longer hauls out to Lawrence and Manhattan.',
@@ -45,6 +52,12 @@ export const services = [
     name: 'Diesel Repair',
     shortName: 'Diesel',
     image: 'engine-timing.webp',
+    midImage: { src: 'truck-engine-hoist.webp', alt: 'Diesel truck engine on a hoist during a replacement at Total Turf & Auto' },
+    galleryImages: [
+      { src: 'engine-timing-detail.webp', alt: 'Diesel engine timing components exposed for service' },
+      { src: 'engine-subframe.webp', alt: 'Engine and subframe assembly being worked on' },
+      { src: 'engine-rear-detail.webp', alt: 'Rear of a diesel engine showing the rear main and harmonic balancer' },
+    ],
     metaTitle: 'Diesel Truck Repair in Topeka, KS (Power Stroke, Cummins, Duramax) | Total Turf & Auto',
     metaDescription: 'Diesel diagnostics, maintenance, and repair on Power Stroke, Cummins, and Duramax in Topeka, KS. Owner-operated by Ryan. Call to book your truck.',
     intro: 'Diesels are not just bigger gas engines, and most general shops in Topeka will not touch them. Ryan works on Ford Power Stroke, Dodge/Ram Cummins, and GM Duramax trucks regularly, from farm trucks coming in from Jackson County to daily-driven 3/4-tons running between Topeka and Kansas City.',
@@ -83,6 +96,12 @@ export const services = [
     name: 'Brakes & Tires',
     shortName: 'Brakes & Tires',
     image: 'minivan-lift.webp',
+    midImage: { src: 'shop-bay-trucks.webp', alt: 'Vehicles in service bays at Total Turf & Auto in Topeka' },
+    galleryImages: [
+      { src: 'corvette-c6-lift.webp', alt: 'Sports car on a lift for brake and wheel service' },
+      { src: 'classic-corvette-lift.webp', alt: 'Classic car raised on a lift, wheels visible' },
+      { src: 'shop-interior.webp', alt: 'Inside the Total Turf & Auto shop floor' },
+    ],
     metaTitle: 'Brake Repair & Tire Service in Topeka, KS | Total Turf & Auto',
     metaDescription: 'Brake pads, rotors, calipers, tire rotation, and balancing in Topeka, KS. Honest pricing and straight answers from owner-operator Ryan. Call to schedule.',
     intro: 'Brakes and tires are the two systems that actually keep you off the shoulder of I-70. Ryan does brake jobs and tire work on cars, half-tons, and three-quarter-tons at the NW Topeka Blvd shop, and will tell you straight when a rotor can be reused and when it cannot.',
@@ -121,6 +140,12 @@ export const services = [
     name: 'Engine Service & Replacement',
     shortName: 'Engine',
     image: 'truck-engine-hoist.webp',
+    midImage: { src: 'jeep-engine-out.webp', alt: 'Jeep on a lift with the engine removed at Total Turf & Auto' },
+    galleryImages: [
+      { src: 'engine-block-camshaft.webp', alt: 'Engine block with the camshaft pulled during a rebuild' },
+      { src: 'mini-engine-out.webp', alt: 'Compact car engine pulled for service' },
+      { src: 'classic-v8.webp', alt: 'Rebuilt V8 in a classic car at Total Turf & Auto' },
+    ],
     metaTitle: 'Engine Repair & Replacement in Topeka, KS | Total Turf & Auto',
     metaDescription: 'Check-engine diagnostics, engine repair, and complete engine replacements in Topeka, KS. Owner-operated shop on NW Topeka Blvd. Call Ryan to discuss.',
     intro: 'When the check-engine light comes on or you hear a knock you have not heard before, you want someone who is going to find the real cause, not guess. Ryan does engine diagnostics, repairs, and full engine swaps at Total Turf & Auto, and will tell you honestly when a vehicle is worth fixing and when it is not.',
@@ -159,6 +184,12 @@ export const services = [
     name: 'Vehicle Inspections',
     shortName: 'Inspections',
     image: 'classic-corvette-lift.webp',
+    midImage: { src: 'minivan-lift.webp', alt: 'Vehicle thoroughly inspected on a lift at Total Turf & Auto' },
+    galleryImages: [
+      { src: 'shop-bay-trucks.webp', alt: 'Vehicles in for inspection at Total Turf & Auto' },
+      { src: 'corvette-c6-lift.webp', alt: 'Sports car on a lift during a pre-purchase inspection' },
+      { src: 'shop-interior.webp', alt: 'The Total Turf & Auto shop floor in Topeka' },
+    ],
     metaTitle: 'Pre-Purchase & Multi-Point Vehicle Inspections in Topeka, KS | Total Turf & Auto',
     metaDescription: 'Pre-purchase inspections and multi-point vehicle inspections in Topeka, KS. Honest reports from owner-operator Ryan. Schedule before you buy.',
     intro: 'A 90-minute inspection before you hand over money is the cheapest hour you will ever spend on a used vehicle. Ryan does pre-purchase inspections and full multi-point inspections at the NW Topeka Blvd shop, and gives you a straight written report instead of upsell pressure.',
@@ -197,6 +228,12 @@ export const services = [
     name: 'Diagnostics & Electrical',
     shortName: 'Diagnostics',
     image: 'interior-wiring.webp',
+    midImage: { src: 'engine-timing-detail.webp', alt: 'Close-up of engine components during electrical diagnosis' },
+    galleryImages: [
+      { src: 'shop-interior.webp', alt: 'The Total Turf & Auto shop where diagnostic work is performed' },
+      { src: 'transmission-work.webp', alt: 'Underside electrical inspection on the lift' },
+      { src: 'engine-rear-detail.webp', alt: 'Engine bay component close-up during diagnostics' },
+    ],
     metaTitle: 'Auto Diagnostics & Electrical Repair in Topeka, KS | Total Turf & Auto',
     metaDescription: 'Warning light diagnostics, battery, starter, alternator, and wiring repair in Topeka, KS. Owner-operated shop on NW Topeka Blvd. Call Ryan.',
     intro: 'Modern vehicles have 30 to 100 computer modules talking to each other, and the parts cannon is an expensive way to fix the wrong thing. Ryan diagnoses warning lights, no-start issues, and electrical gremlins with proper scan tools and a meter, and tells you what is actually broken before any parts get ordered.',

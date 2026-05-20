@@ -921,3 +921,40 @@ img.review-avatar { object-fit: cover; }
 .vehicle-card { text-align: left; padding: 22px 24px; }
 .vehicle-card .why-icon { margin: 0 0 14px; }
 .vehicle-card h3 { font-size: 1rem; }
+
+/* ---------- Service detail: mid-banner + gallery strip ---------- */
+.service-banner {
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 0 auto 28px;
+  box-shadow: var(--shadow-md);
+}
+.service-banner img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-height: 480px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.service-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.service-gallery .gallery-item {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.service-gallery .gallery-item img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  transition: transform 0.35s var(--ease);
+}
+.service-gallery .gallery-item:hover img { transform: scale(1.05); }
+@media (max-width: 760px) {
+  .service-gallery { grid-template-columns: 1fr; gap: 12px; }
+  .service-banner img { aspect-ratio: 4 / 3; }
+}

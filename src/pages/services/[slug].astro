@@ -102,6 +102,27 @@ const others = services.filter((s) => s.slug !== service.slug);
     </div>
   </section>
 
+  <!-- ===== Real work (mid-banner + gallery strip) ===== -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">From the Shop</span>
+        <h2>Real {service.shortName} Work in Topeka</h2>
+        <p>A look at the kind of work that comes through the shop.</p>
+      </div>
+      <div class="service-banner reveal">
+        <img src={`/assets/img/work/${service.midImage.src}`} alt={service.midImage.alt} width="600" height="700" loading="lazy" />
+      </div>
+      <div class="service-gallery">
+        {service.galleryImages.map((g) => (
+          <figure class="gallery-item reveal">
+            <img src={`/assets/img/work/${g.src}`} alt={g.alt} width="600" height="450" loading="lazy" />
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- ===== CTA ===== -->
   <section class="section section--soft">
     <div class="container">
