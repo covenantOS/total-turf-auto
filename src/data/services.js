@@ -1,6 +1,8 @@
 // Service catalog. Each entry generates a page at /services/{slug}/.
 // `image` is the main split image. `midImage` is the wide mid-page banner.
 // `galleryImages` is a 3-photo strip showing real work for the service.
+// `vehicleTypes` is an array of { label, image } — each vehicle category gets
+// its own stock photo from public/assets/img/vehicles/.
 
 export const services = [
   {
@@ -8,7 +10,6 @@ export const services = [
     name: 'Routine Maintenance',
     shortName: 'Maintenance',
     image: 'oil-change.webp',
-    vehicleImage: { src: 'classic-corvette-lift.webp', alt: 'Vehicle up on the lift for maintenance at Total Turf & Auto in Topeka' },
     midImage: { src: 'shop-bay-trucks.webp', alt: 'Vehicles in for service at Total Turf & Auto in Topeka, KS' },
     galleryImages: [
       { src: 'shop-interior.webp', alt: 'Inside the Total Turf & Auto repair shop in Topeka' },
@@ -27,11 +28,11 @@ export const services = [
       'NGK and Denso spark plugs for tune-ups, gapped to manufacturer spec',
     ],
     vehicleTypes: [
-      'Domestic and import passenger cars',
-      'Half-ton and three-quarter-ton pickups (F-150, Silverado, Ram 1500)',
-      'SUVs and crossovers',
-      'Minivans and family haulers',
-      'Older high-mileage vehicles still on the road',
+      { label: 'Domestic and import passenger cars', image: 'sedan.jpg' },
+      { label: 'Half-ton and three-quarter-ton pickups (F-150, Silverado, Ram 1500)', image: 'pickup.jpg' },
+      { label: 'SUVs and crossovers', image: 'suv.jpg' },
+      { label: 'Minivans and family haulers', image: 'minivan.jpg' },
+      { label: 'Older high-mileage vehicles still on the road', image: 'classic.jpg' },
     ],
     process: [
       { step: 'Vehicle in and quick visual check', time: '10 to 15 min', description: 'Pull the vehicle in, verify mileage, and walk around it for any obvious leaks or tire issues before lifting.' },
@@ -53,7 +54,6 @@ export const services = [
     name: 'Diesel Repair',
     shortName: 'Diesel',
     image: 'engine-timing.webp',
-    vehicleImage: { src: 'shop-bay-trucks.webp', alt: 'Diesel trucks and pickups in for service at Total Turf & Auto' },
     midImage: { src: 'truck-engine-hoist.webp', alt: 'Diesel truck engine on a hoist during a replacement at Total Turf & Auto' },
     galleryImages: [
       { src: 'engine-timing-detail.webp', alt: 'Diesel engine timing components exposed for service' },
@@ -72,11 +72,9 @@ export const services = [
       'OEM-spec coolant (ELC for Cummins, DEX-COOL for Duramax, Ford Gold for Power Stroke)',
     ],
     vehicleTypes: [
-      'Ford F-250 and F-350 Power Stroke (7.3L, 6.0L, 6.4L, 6.7L)',
-      'Ram 2500 and 3500 Cummins (5.9L 12v and 24v, 6.7L)',
-      'Chevy/GMC 2500HD and 3500HD Duramax (LB7, LLY, LBZ, LMM, LML, L5P)',
-      'Light-duty diesels (Chevy Colorado, Ford F-150 PowerStroke 3.0L)',
-      'Farm trucks and work trucks',
+      { label: 'Heavy-duty diesel pickups: Power Stroke, Cummins, and Duramax (F-250/F-350, Ram 2500/3500, Chevy 2500HD/3500HD)', image: 'pickup.jpg' },
+      { label: 'Light-duty diesels (Chevy Colorado, Ford F-150 PowerStroke 3.0L)', image: 'suv.jpg' },
+      { label: 'Farm trucks, work trucks, and commercial vans', image: 'minivan.jpg' },
     ],
     process: [
       { step: 'Customer interview and code scan', time: '20 to 40 min', description: 'Listen to what the truck is doing, pull live data and stored codes, and look at fuel rail pressure, EGTs, and regen history.' },
@@ -98,7 +96,6 @@ export const services = [
     name: 'Brakes & Tires',
     shortName: 'Brakes & Tires',
     image: 'minivan-lift.webp',
-    vehicleImage: { src: 'truck-engine-hoist.webp', alt: 'Half-ton pickup in for brake and tire work at Total Turf & Auto' },
     midImage: { src: 'shop-bay-trucks.webp', alt: 'Vehicles in service bays at Total Turf & Auto in Topeka' },
     galleryImages: [
       { src: 'corvette-c6-lift.webp', alt: 'Sports car on a lift for brake and wheel service' },
@@ -117,11 +114,11 @@ export const services = [
       'AC Delco wheel bearings and hub assemblies when needed',
     ],
     vehicleTypes: [
-      'Passenger cars and sedans',
-      'SUVs and crossovers',
-      'Half-ton pickups (F-150, Silverado 1500, Ram 1500)',
-      '3/4-ton and 1-ton trucks with larger rotors and calipers',
-      'Classic cars (drum brake rebuilds and disc conversions)',
+      { label: 'Passenger cars and sedans', image: 'sedan.jpg' },
+      { label: 'SUVs and crossovers', image: 'suv.jpg' },
+      { label: 'Half-ton, 3/4-ton, and 1-ton pickup trucks', image: 'pickup.jpg' },
+      { label: 'Minivans and family haulers', image: 'minivan.jpg' },
+      { label: 'Classic cars (drum brake rebuilds and disc conversions)', image: 'classic.jpg' },
     ],
     process: [
       { step: 'Wheels off and brake inspection', time: '20 to 30 min', description: 'Measure pad thickness, rotor thickness with a micrometer, and check caliper slides, hoses, and parking brake.' },
@@ -143,7 +140,6 @@ export const services = [
     name: 'Engine Service & Replacement',
     shortName: 'Engine',
     image: 'truck-engine-hoist.webp',
-    vehicleImage: { src: 'shop-bay-trucks.webp', alt: 'Range of vehicles serviced at Total Turf & Auto' },
     midImage: { src: 'jeep-engine-out.webp', alt: 'Jeep on a lift with the engine removed at Total Turf & Auto' },
     galleryImages: [
       { src: 'engine-block-camshaft.webp', alt: 'Engine block with the camshaft pulled during a rebuild' },
@@ -162,11 +158,11 @@ export const services = [
       'OEM or quality aftermarket sensors (Bosch, Standard Motor Products)',
     ],
     vehicleTypes: [
-      'Domestic V6 and V8 trucks and SUVs',
-      'Import 4-cylinder and V6 cars (Toyota, Honda, Subaru, Nissan)',
-      'Diesel engines (covered in detail under Diesel Repair)',
-      'Older carbureted and early fuel-injected vehicles',
-      'Classic car engine rebuilds (small block Chevy, Ford 302/351, Mopar)',
+      { label: 'Import 4-cylinder and V6 cars (Toyota, Honda, Subaru, Nissan)', image: 'sedan.jpg' },
+      { label: 'Domestic V6 and V8 trucks', image: 'pickup.jpg' },
+      { label: 'SUVs and crossovers', image: 'suv.jpg' },
+      { label: 'Family minivans and work vans', image: 'minivan.jpg' },
+      { label: 'Classic engine rebuilds (small block Chevy, Ford 302/351, Mopar)', image: 'classic.jpg' },
     ],
     process: [
       { step: 'Scan and verify the complaint', time: '30 to 60 min', description: 'Pull codes, freeze frame data, and live data. Confirm the actual symptom (misfire, knock, low compression, oil consumption).' },
@@ -188,7 +184,6 @@ export const services = [
     name: 'Vehicle Inspections',
     shortName: 'Inspections',
     image: 'classic-corvette-lift.webp',
-    vehicleImage: { src: 'classic-v8.webp', alt: 'Classic car under inspection at Total Turf & Auto in Topeka' },
     midImage: { src: 'minivan-lift.webp', alt: 'Vehicle thoroughly inspected on a lift at Total Turf & Auto' },
     galleryImages: [
       { src: 'shop-bay-trucks.webp', alt: 'Vehicles in for inspection at Total Turf & Auto' },
@@ -207,11 +202,11 @@ export const services = [
       'Vehicle lift for full undercarriage inspection',
     ],
     vehicleTypes: [
-      'Used cars from private sellers or dealers',
-      'Used trucks (gas and diesel)',
-      'High-mileage vehicles you are deciding whether to keep',
-      'Vehicles coming off lease',
-      'Classic and collector cars under consideration',
+      { label: 'Used cars and sedans from private sellers or dealers', image: 'sedan.jpg' },
+      { label: 'Used pickup trucks (gas and diesel)', image: 'pickup.jpg' },
+      { label: 'SUVs and crossovers, including off-lease vehicles', image: 'suv.jpg' },
+      { label: 'Minivans and family haulers', image: 'minivan.jpg' },
+      { label: 'Classic and collector cars under consideration', image: 'classic.jpg' },
     ],
     process: [
       { step: 'Document and visual walk-around', time: '15 to 20 min', description: 'Record VIN, mileage, and condition. Note any obvious paint work, panel gaps, or rust on the body.' },
@@ -233,7 +228,6 @@ export const services = [
     name: 'Diagnostics & Electrical',
     shortName: 'Diagnostics',
     image: 'interior-wiring.webp',
-    vehicleImage: { src: 'shop-bay-trucks.webp', alt: 'Cars, trucks, and work vehicles serviced at Total Turf & Auto' },
     midImage: { src: 'engine-timing-detail.webp', alt: 'Close-up of engine components during electrical diagnosis' },
     galleryImages: [
       { src: 'shop-interior.webp', alt: 'The Total Turf & Auto shop where diagnostic work is performed' },
@@ -252,11 +246,11 @@ export const services = [
       'Quality automotive wire, solder, and heat-shrink for proper repairs (no Scotchlok connectors)',
     ],
     vehicleTypes: [
-      'Cars, SUVs, and pickups (domestic and import)',
-      'Diesel trucks (full module-level scanning)',
-      'Older vehicles with carbureted or early EFI systems',
-      'Classic cars with original or upgraded wiring harnesses',
-      'Work trucks with aftermarket lights, plows, and accessories',
+      { label: 'Cars and sedans (domestic and import)', image: 'sedan.jpg' },
+      { label: 'Pickup trucks and diesels (full module-level scanning)', image: 'pickup.jpg' },
+      { label: 'SUVs and crossovers', image: 'suv.jpg' },
+      { label: 'Work trucks and vans with aftermarket accessories (lights, plows, winches)', image: 'minivan.jpg' },
+      { label: 'Classic cars with original or upgraded wiring harnesses', image: 'classic.jpg' },
     ],
     process: [
       { step: 'Customer interview and symptom verification', time: '15 to 30 min', description: 'When does it happen, how often, hot or cold, in motion or parked. Half the diagnosis is asking the right questions.' },
