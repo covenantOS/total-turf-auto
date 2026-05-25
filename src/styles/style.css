@@ -915,10 +915,10 @@ img.review-avatar { object-fit: cover; }
   .process-num { margin: 0 auto 4px; }
 }
 
-/* ---------- Vehicle type cards ---------- */
-.vehicle-card { text-align: left; padding: 22px 24px; }
-.vehicle-card .why-icon { margin: 0 0 14px; }
-.vehicle-card h3 { font-size: 1rem; }
+/* ---------- Vehicle types list (service detail) ---------- */
+.vehicle-list { margin: 0; gap: 14px; }
+.vehicle-list li { font-size: 1.02rem; line-height: 1.5; }
+.vehicle-list svg { width: 22px; height: 22px; }
 
 /* ---------- Service detail: mid-banner + gallery strip ---------- */
 .service-banner {

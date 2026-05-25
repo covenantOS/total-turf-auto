@@ -8,6 +8,7 @@ export const services = [
     name: 'Routine Maintenance',
     shortName: 'Maintenance',
     image: 'oil-change.webp',
+    vehicleImage: { src: 'classic-corvette-lift.webp', alt: 'Vehicle up on the lift for maintenance at Total Turf & Auto in Topeka' },
     midImage: { src: 'shop-bay-trucks.webp', alt: 'Vehicles in for service at Total Turf & Auto in Topeka, KS' },
     galleryImages: [
       { src: 'shop-interior.webp', alt: 'Inside the Total Turf & Auto repair shop in Topeka' },
@@ -52,6 +53,7 @@ export const services = [
     name: 'Diesel Repair',
     shortName: 'Diesel',
     image: 'engine-timing.webp',
+    vehicleImage: { src: 'shop-bay-trucks.webp', alt: 'Diesel trucks and pickups in for service at Total Turf & Auto' },
     midImage: { src: 'truck-engine-hoist.webp', alt: 'Diesel truck engine on a hoist during a replacement at Total Turf & Auto' },
     galleryImages: [
       { src: 'engine-timing-detail.webp', alt: 'Diesel engine timing components exposed for service' },
@@ -96,6 +98,7 @@ export const services = [
     name: 'Brakes & Tires',
     shortName: 'Brakes & Tires',
     image: 'minivan-lift.webp',
+    vehicleImage: { src: 'truck-engine-hoist.webp', alt: 'Half-ton pickup in for brake and tire work at Total Turf & Auto' },
     midImage: { src: 'shop-bay-trucks.webp', alt: 'Vehicles in service bays at Total Turf & Auto in Topeka' },
     galleryImages: [
       { src: 'corvette-c6-lift.webp', alt: 'Sports car on a lift for brake and wheel service' },
@@ -140,6 +143,7 @@ export const services = [
     name: 'Engine Service & Replacement',
     shortName: 'Engine',
     image: 'truck-engine-hoist.webp',
+    vehicleImage: { src: 'shop-bay-trucks.webp', alt: 'Range of vehicles serviced at Total Turf & Auto' },
     midImage: { src: 'jeep-engine-out.webp', alt: 'Jeep on a lift with the engine removed at Total Turf & Auto' },
     galleryImages: [
       { src: 'engine-block-camshaft.webp', alt: 'Engine block with the camshaft pulled during a rebuild' },
@@ -184,6 +188,7 @@ export const services = [
     name: 'Vehicle Inspections',
     shortName: 'Inspections',
     image: 'classic-corvette-lift.webp',
+    vehicleImage: { src: 'classic-v8.webp', alt: 'Classic car under inspection at Total Turf & Auto in Topeka' },
     midImage: { src: 'minivan-lift.webp', alt: 'Vehicle thoroughly inspected on a lift at Total Turf & Auto' },
     galleryImages: [
       { src: 'shop-bay-trucks.webp', alt: 'Vehicles in for inspection at Total Turf & Auto' },
@@ -228,6 +233,7 @@ export const services = [
     name: 'Diagnostics & Electrical',
     shortName: 'Diagnostics',
     image: 'interior-wiring.webp',
+    vehicleImage: { src: 'shop-bay-trucks.webp', alt: 'Cars, trucks, and work vehicles serviced at Total Turf & Auto' },
     midImage: { src: 'engine-timing-detail.webp', alt: 'Close-up of engine components during electrical diagnosis' },
     galleryImages: [
       { src: 'shop-interior.webp', alt: 'The Total Turf & Auto shop where diagnostic work is performed' },

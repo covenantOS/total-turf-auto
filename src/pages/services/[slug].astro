@@ -64,15 +64,20 @@ const others = services.filter((s) => s.slug !== service.slug);
         <h2>Vehicles We Work On</h2>
         <p>If you do not see your vehicle below, call Ryan. Chances are we can help.</p>
       </div>
-      <div class="why-grid">
-        {service.vehicleTypes.map((v) => (
-          <div class="why-card vehicle-card reveal">
-            <div class="why-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11l1.5-4h11L19 11M5 11h14v6h-2v2h-2v-2H9v2H7v-2H5v-6z"/><circle cx="8" cy="14.5" r="1.2"/><circle cx="16" cy="14.5" r="1.2"/></svg>
-            </div>
-            <h3>{v}</h3>
-          </div>
-        ))}
+      <div class="split">
+        <div class="split-body reveal">
+          <ul class="check-list vehicle-list">
+            {service.vehicleTypes.map((v) => (
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                {v}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="split-media reveal">
+          <img src={`/assets/img/work/${service.vehicleImage.src}`} alt={service.vehicleImage.alt} width="600" height="700" loading="lazy" />
+        </div>
       </div>
     </div>
   </section>
