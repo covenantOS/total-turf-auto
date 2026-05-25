@@ -1,7 +1,7 @@
 // Service catalog. Each entry generates a page at /services/{slug}/.
 // `image` is the main split image. `midImage` is the wide mid-page banner.
 // `galleryImages` is a 3-photo strip showing real work for the service.
-// `vehicleTypes` is an array of { label, image } — each vehicle category gets
+// `vehicleTypes` is an array of { label, image }, each vehicle category gets
 // its own stock photo from public/assets/img/vehicles/.
 // `h1` overrides the on-page H1 so we can target the strongest local keyword
 // while keeping `name` clean for nav/breadcrumbs.
