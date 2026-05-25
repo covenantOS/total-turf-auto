@@ -27,7 +27,7 @@ const others = services.filter((s) => s.slug !== service.slug);
   <section class="page-hero">
     <div class="container">
       <p class="crumbs"><a href="/">Home</a> / <a href="/services">Services</a> / <span>{service.name}</span></p>
-      <h1>{service.name} in Topeka, KS</h1>
+      <h1>{service.h1 || `${service.name} in Topeka, KS`}</h1>
       <p>{service.intro}</p>
     </div>
   </section>

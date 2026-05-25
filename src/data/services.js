@@ -3,6 +3,8 @@
 // `galleryImages` is a 3-photo strip showing real work for the service.
 // `vehicleTypes` is an array of { label, image } — each vehicle category gets
 // its own stock photo from public/assets/img/vehicles/.
+// `h1` overrides the on-page H1 so we can target the strongest local keyword
+// while keeping `name` clean for nav/breadcrumbs.
 
 export const services = [
   {
@@ -16,9 +18,10 @@ export const services = [
       { src: 'engine-block-camshaft.webp', alt: 'Engine internals during a service job' },
       { src: 'transmission-work.webp', alt: 'Underside fluid and driveline inspection on the lift' },
     ],
-    metaTitle: 'Routine Maintenance & Oil Changes in Topeka, KS | Total Turf & Auto',
-    metaDescription: 'Oil changes, fluid service, and scheduled maintenance in Topeka, KS. Ryan runs every job himself at the NW Topeka Blvd shop. Call to book.',
-    intro: 'Routine service is the cheapest insurance you can buy on a vehicle. Ryan handles oil changes, fluid flushes, and scheduled service for daily drivers all over Topeka and Shawnee County, from short commutes on Topeka Blvd to longer hauls out to Lawrence and Manhattan.',
+    metaTitle: 'Oil Change & Maintenance Topeka KS | Total Turf & Auto',
+    metaDescription: 'Oil change and routine maintenance in Topeka, KS. Full synthetic oil, fluid service, and scheduled maintenance from owner-mechanic Ryan. Call to book.',
+    h1: 'Oil Change & Routine Maintenance in Topeka, KS',
+    intro: 'Routine service is the cheapest insurance you can buy on a vehicle. Ryan handles oil changes, fluid flushes, and scheduled service for daily drivers all over Topeka, KS and Shawnee County, from short commutes on Topeka Blvd to longer hauls out to Lawrence and Manhattan.',
     materials: [
       'AC Delco oil filters: OEM-grade fit and filtration on GM and most domestic platforms',
       'Renegade full synthetic motor oil: 5W-20, 5W-30, and 0W-20 grades stocked',
@@ -43,7 +46,7 @@ export const services = [
     ],
     totalTime: '30 to 60 minutes for a standard oil change',
     faq: [
-      { q: 'How often should I get an oil change?', a: 'On full synthetic like Renegade, every 5,000 to 7,500 miles for most cars. If you tow, idle a lot, or drive short trips in Topeka winters, stick closer to 5,000. Conventional oil should be changed every 3,000 to 4,000 miles.' },
+      { q: 'How often should I get an oil change in Topeka?', a: 'On full synthetic like Renegade, every 5,000 to 7,500 miles for most cars. If you tow, idle a lot, or drive short trips in Topeka winters, stick closer to 5,000. Conventional oil should be changed every 3,000 to 4,000 miles.' },
       { q: 'Do you use the right oil weight for my vehicle?', a: 'Yes. Ryan pulls the spec from the owner manual or service data, not a guess. Running 5W-30 in an engine that calls for 0W-20 will hurt fuel economy and can void warranty coverage.' },
       { q: 'Can you do the rest of my scheduled service (30K, 60K, 90K)?', a: 'Yes. Bring the service schedule or just the vehicle. We can knock out filters, plugs, coolant, transmission fluid, and brake fluid in one visit instead of nickel-and-diming you across multiple appointments.' },
       { q: 'Do I need an appointment?', a: 'For routine work, calling ahead is best so Ryan can have your filter and the right oil on the shelf. Walk-ins are fine if the bay is open.' },
@@ -54,14 +57,15 @@ export const services = [
     name: 'Diesel Repair',
     shortName: 'Diesel',
     image: 'engine-timing.webp',
-    midImage: { src: 'truck-engine-hoist.webp', alt: 'Diesel truck engine on a hoist during a replacement at Total Turf & Auto' },
+    midImage: { src: 'truck-engine-hoist.webp', alt: 'Diesel truck engine on a hoist during a replacement at Total Turf & Auto in Topeka' },
     galleryImages: [
       { src: 'engine-timing-detail.webp', alt: 'Diesel engine timing components exposed for service' },
       { src: 'engine-subframe.webp', alt: 'Engine and subframe assembly being worked on' },
       { src: 'engine-rear-detail.webp', alt: 'Rear of a diesel engine showing the rear main and harmonic balancer' },
     ],
-    metaTitle: 'Diesel Truck Repair in Topeka, KS (Power Stroke, Cummins, Duramax) | Total Turf & Auto',
-    metaDescription: 'Diesel diagnostics, maintenance, and repair on Power Stroke, Cummins, and Duramax in Topeka, KS. Owner-operated by Ryan. Call to book your truck.',
+    metaTitle: 'Diesel Repair Topeka KS | Total Turf & Auto',
+    metaDescription: 'Diesel truck repair in Topeka, KS. Power Stroke, Cummins, and Duramax diagnostics, maintenance, and repair from owner-mechanic Ryan. Call to book.',
+    h1: 'Diesel Truck Repair in Topeka, KS',
     intro: 'Diesels are not just bigger gas engines, and most general shops in Topeka will not touch them. Ryan works on Ford Power Stroke, Dodge/Ram Cummins, and GM Duramax trucks regularly, from farm trucks coming in from Jackson County to daily-driven 3/4-tons running between Topeka and Kansas City.',
     materials: [
       'Renegade 15W-40 and 5W-40 heavy-duty diesel engine oil',
@@ -85,6 +89,7 @@ export const services = [
     ],
     totalTime: 'Diagnosis takes 1 to 4 hours. Repair time ranges from a same-day glow plug job to several days for injectors or head gaskets.',
     faq: [
+      { q: 'Where can I find diesel repair in Topeka, KS?', a: 'Total Turf & Auto at 2700 NW Topeka Blvd handles diesel repair on Power Stroke, Cummins, and Duramax trucks. Call or text (785) 925-4040 to book.' },
       { q: 'Do you work on deleted trucks?', a: 'Ryan focuses on emissions-intact trucks. Federal law restricts emissions tampering, so we will not delete a DPF or EGR system. If your truck is already modified, call and we can talk through what we can and cannot help with.' },
       { q: 'My 6.0L Power Stroke is acting up. Can you help?', a: 'Yes. The 6.0L has known issues with head studs, EGR coolers, oil coolers, FICMs, and injectors. Ryan can diagnose which one is actually causing your problem instead of throwing parts at it.' },
       { q: 'How often should I service my diesel?', a: 'Most modern diesels want oil and filter every 5,000 to 7,500 miles, fuel filters every 15,000 to 20,000 miles, and coolant every 5 years or 150,000 miles. Towing or idling a lot? Cut those intervals.' },
@@ -96,15 +101,16 @@ export const services = [
     name: 'Brakes & Tires',
     shortName: 'Brakes & Tires',
     image: 'minivan-lift.webp',
-    midImage: { src: 'shop-bay-trucks.webp', alt: 'Vehicles in service bays at Total Turf & Auto in Topeka' },
+    midImage: { src: 'shop-bay-trucks.webp', alt: 'Vehicles in service bays at the Topeka tire shop and brake shop Total Turf & Auto' },
     galleryImages: [
-      { src: 'corvette-c6-lift.webp', alt: 'Sports car on a lift for brake and wheel service' },
+      { src: 'corvette-c6-lift.webp', alt: 'Sports car on a lift for brake and wheel service in Topeka' },
       { src: 'classic-corvette-lift.webp', alt: 'Classic car raised on a lift, wheels visible' },
       { src: 'shop-interior.webp', alt: 'Inside the Total Turf & Auto shop floor' },
     ],
-    metaTitle: 'Brake Repair & Tire Service in Topeka, KS | Total Turf & Auto',
-    metaDescription: 'Brake pads, rotors, calipers, tire rotation, and balancing in Topeka, KS. Honest pricing and straight answers from owner-operator Ryan. Call to schedule.',
-    intro: 'Brakes and tires are the two systems that actually keep you off the shoulder of I-70. Ryan does brake jobs and tire work on cars, half-tons, and three-quarter-tons at the NW Topeka Blvd shop, and will tell you straight when a rotor can be reused and when it cannot.',
+    metaTitle: 'Tire Shop & Brake Repair Topeka KS | Total Turf & Auto',
+    metaDescription: 'Tire shop and brake repair in Topeka, KS. Pads, rotors, tire rotation, balancing, and straight answers from owner-mechanic Ryan. Call to schedule.',
+    h1: 'Tire Shop & Brake Repair in Topeka, KS',
+    intro: 'Brakes and tires are the two systems that actually keep you off the shoulder of I-70. As a working tire shop and brake shop in Topeka, KS, Ryan does brake jobs and tire work on cars, half-tons, and three-quarter-tons at the NW Topeka Blvd shop, and will tell you straight when a rotor can be reused and when it cannot.',
     materials: [
       'Wagner ThermoQuiet and Akebono ceramic brake pads',
       'Centric and Raybestos rotors (blank and drilled/slotted on request)',
@@ -129,6 +135,7 @@ export const services = [
     ],
     totalTime: 'Single-axle brake job runs 90 minutes to 2.5 hours. Four tires mounted and balanced takes about 60 to 90 minutes.',
     faq: [
+      { q: 'Is there a good tire shop in Topeka, KS?', a: 'Yes. Total Turf & Auto on NW Topeka Blvd is a working tire shop and brake shop. We mount, balance, and rotate tires, and handle brake pads, rotors, and calipers. Call (785) 925-4040 to schedule.' },
       { q: 'Do my rotors always need replacing with new pads?', a: 'No. If they measure above the discard thickness stamped on the rotor and are not warped or grooved, they can be resurfaced or reused. Ryan will measure them in front of you if you want to see.' },
       { q: 'How long do brake pads last?', a: 'Most drivers get 30,000 to 70,000 miles out of a set of pads. City driving in Topeka and a lot of stop-and-go on Wanamaker shortens that. Highway commuters get more life out of them.' },
       { q: 'Do you do alignments?', a: 'We do alignment checks and will tell you if your vehicle needs one. For the actual alignment we partner with a nearby shop that has a dedicated rack, since doing it right requires equipment we do not duplicate.' },
@@ -140,15 +147,16 @@ export const services = [
     name: 'Engine Service & Replacement',
     shortName: 'Engine',
     image: 'truck-engine-hoist.webp',
-    midImage: { src: 'jeep-engine-out.webp', alt: 'Jeep on a lift with the engine removed at Total Turf & Auto' },
+    midImage: { src: 'jeep-engine-out.webp', alt: 'Jeep on a lift with the engine removed at Total Turf & Auto in Topeka' },
     galleryImages: [
       { src: 'engine-block-camshaft.webp', alt: 'Engine block with the camshaft pulled during a rebuild' },
       { src: 'mini-engine-out.webp', alt: 'Compact car engine pulled for service' },
       { src: 'classic-v8.webp', alt: 'Rebuilt V8 in a classic car at Total Turf & Auto' },
     ],
-    metaTitle: 'Engine Repair & Replacement in Topeka, KS | Total Turf & Auto',
-    metaDescription: 'Check-engine diagnostics, engine repair, and complete engine replacements in Topeka, KS. Owner-operated shop on NW Topeka Blvd. Call Ryan to discuss.',
-    intro: 'When the check-engine light comes on or you hear a knock you have not heard before, you want someone who is going to find the real cause, not guess. Ryan does engine diagnostics, repairs, and full engine swaps at Total Turf & Auto, and will tell you honestly when a vehicle is worth fixing and when it is not.',
+    metaTitle: 'Engine Repair & Replacement Topeka KS | Total Turf & Auto',
+    metaDescription: 'Engine repair and replacement in Topeka, KS. Check-engine diagnostics, engine repair, and full engine swaps from owner-mechanic Ryan. Call to discuss.',
+    h1: 'Engine Repair & Replacement in Topeka, KS',
+    intro: 'When the check-engine light comes on or you hear a knock you have not heard before, you want someone who is going to find the real cause, not guess. Ryan does engine diagnostics, repairs, and full engine swaps at Total Turf & Auto in Topeka, KS, and will tell you honestly when a vehicle is worth fixing and when it is not.',
     materials: [
       'Renegade full synthetic for break-in and refill on rebuilt engines',
       'AC Delco oil filters and OEM-style gaskets',
@@ -173,6 +181,7 @@ export const services = [
     ],
     totalTime: 'Diagnostics take 1 to 3 hours. Repairs range from same-day sensor swaps to 1 to 3 weeks for a complete engine replacement.',
     faq: [
+      { q: 'Where do I get engine repair in Topeka, KS?', a: 'Total Turf & Auto at 2700 NW Topeka Blvd handles check-engine diagnostics, engine repair, and full engine replacements. Call or text (785) 925-4040 to talk through your situation.' },
       { q: 'My check-engine light is on. Is it serious?', a: 'A solid light means a stored code that needs attention soon. A flashing light means an active misfire that can damage the catalytic converter within minutes. Bring it in either way, but a flashing light means do not keep driving it.' },
       { q: 'Is it worth replacing the engine in my truck?', a: 'Depends on the rest of the truck. If the body, frame, and transmission are solid and you like the vehicle, a Jasper reman with a 3-year warranty often costs less than a comparable used truck. Ryan will run the numbers with you.' },
       { q: 'How long does an engine swap take?', a: 'Plan on 3 to 10 working days for most trucks and SUVs, longer if parts are backordered or the vehicle has rust issues. We will give you a firm timeline once we have the vehicle apart and parts confirmed.' },
@@ -184,14 +193,15 @@ export const services = [
     name: 'Vehicle Inspections',
     shortName: 'Inspections',
     image: 'classic-corvette-lift.webp',
-    midImage: { src: 'minivan-lift.webp', alt: 'Vehicle thoroughly inspected on a lift at Total Turf & Auto' },
+    midImage: { src: 'minivan-lift.webp', alt: 'Vehicle thoroughly inspected on a lift at Total Turf & Auto in Topeka' },
     galleryImages: [
-      { src: 'shop-bay-trucks.webp', alt: 'Vehicles in for inspection at Total Turf & Auto' },
+      { src: 'shop-bay-trucks.webp', alt: 'Vehicles in for inspection at Total Turf & Auto in Topeka' },
       { src: 'corvette-c6-lift.webp', alt: 'Sports car on a lift during a pre-purchase inspection' },
       { src: 'shop-interior.webp', alt: 'The Total Turf & Auto shop floor in Topeka' },
     ],
-    metaTitle: 'Pre-Purchase & Multi-Point Vehicle Inspections in Topeka, KS | Total Turf & Auto',
-    metaDescription: 'Pre-purchase inspections and multi-point vehicle inspections in Topeka, KS. Honest reports from owner-operator Ryan. Schedule before you buy.',
+    metaTitle: 'Pre-Purchase Vehicle Inspections Topeka KS | Total Turf & Auto',
+    metaDescription: 'Pre-purchase and multi-point vehicle inspections in Topeka, KS. Honest written reports from owner-mechanic Ryan. Schedule before you buy.',
+    h1: 'Pre-Purchase Vehicle Inspections in Topeka, KS',
     intro: 'A 90-minute inspection before you hand over money is the cheapest hour you will ever spend on a used vehicle. Ryan does pre-purchase inspections and full multi-point inspections at the NW Topeka Blvd shop, and gives you a straight written report instead of upsell pressure.',
     materials: [
       'OBD-II scan tool with live data and module-level scanning',
@@ -217,7 +227,7 @@ export const services = [
     ],
     totalTime: '90 minutes to 2.5 hours depending on vehicle type and how deep the inspection goes',
     faq: [
-      { q: 'How much does a pre-purchase inspection cost?', a: 'Call for current pricing. It varies by vehicle type (a Honda Civic is faster than a 6.7L diesel), but it is almost always less than the cost of the first surprise repair after you buy.' },
+      { q: 'How much does a pre-purchase inspection cost in Topeka?', a: 'Call for current pricing. It varies by vehicle type (a Honda Civic is faster than a 6.7L diesel), but it is almost always less than the cost of the first surprise repair after you buy.' },
       { q: 'Can you go look at a vehicle at a dealer or seller?', a: 'You bring the vehicle to the shop. Most sellers and dealers will allow a buyer to take a used vehicle out for an inspection, and that is the only way Ryan can put it on a lift and scan it properly.' },
       { q: 'What if the vehicle fails the inspection?', a: 'It does not really pass or fail. You get a report on what is good, what needs attention soon, and what is a deal-breaker. You decide what to do with the information.' },
       { q: 'Do you do Kansas state safety inspections?', a: 'Kansas does not require annual safety inspections for passenger vehicles. We do offer thorough multi-point inspections, which is different from a state inspection but more useful day-to-day.' },
@@ -228,15 +238,16 @@ export const services = [
     name: 'Diagnostics & Electrical',
     shortName: 'Diagnostics',
     image: 'interior-wiring.webp',
-    midImage: { src: 'engine-timing-detail.webp', alt: 'Close-up of engine components during electrical diagnosis' },
+    midImage: { src: 'engine-timing-detail.webp', alt: 'Close-up of engine components during electrical diagnosis in Topeka' },
     galleryImages: [
       { src: 'shop-interior.webp', alt: 'The Total Turf & Auto shop where diagnostic work is performed' },
       { src: 'transmission-work.webp', alt: 'Underside electrical inspection on the lift' },
       { src: 'engine-rear-detail.webp', alt: 'Engine bay component close-up during diagnostics' },
     ],
-    metaTitle: 'Auto Diagnostics & Electrical Repair in Topeka, KS | Total Turf & Auto',
-    metaDescription: 'Warning light diagnostics, battery, starter, alternator, and wiring repair in Topeka, KS. Owner-operated shop on NW Topeka Blvd. Call Ryan.',
-    intro: 'Modern vehicles have 30 to 100 computer modules talking to each other, and the parts cannon is an expensive way to fix the wrong thing. Ryan diagnoses warning lights, no-start issues, and electrical gremlins with proper scan tools and a meter, and tells you what is actually broken before any parts get ordered.',
+    metaTitle: 'Auto Diagnostics & Electrical Topeka KS | Total Turf & Auto',
+    metaDescription: 'Check-engine light diagnostics, battery, starter, alternator, and wiring repair in Topeka, KS. Owner-mechanic Ryan finds the real cause. Call to book.',
+    h1: 'Auto Diagnostics & Electrical Repair in Topeka, KS',
+    intro: 'Modern vehicles have 30 to 100 computer modules talking to each other, and the parts cannon is an expensive way to fix the wrong thing. Ryan diagnoses warning lights, no-start issues, and electrical gremlins at the Topeka shop with proper scan tools and a meter, and tells you what is actually broken before any parts get ordered.',
     materials: [
       'Snap-on and Autel bidirectional scan tools',
       'Fluke digital multimeter and Power Probe',
