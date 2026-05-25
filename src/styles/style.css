@@ -431,7 +431,7 @@ section { scroll-margin-top: 96px; }
 .review-author { display: flex; align-items: center; gap: 12px; margin-top: 20px; }
 .review-avatar {
   width: 44px; height: 44px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--green), var(--lime));
+  background: var(--green);
   display: flex; align-items: center; justify-content: center;
   color: var(--white); font-weight: 700;
 }
@@ -534,7 +534,7 @@ section { scroll-margin-top: 96px; }
 .page-hero::before {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(circle at 85% 30%, rgba(145, 187, 67, 0.2), transparent 50%);
+  background: rgba(145, 187, 67, 0.06);
 }
 .page-hero .container { position: relative; padding: 64px 24px; text-align: center; }
 .page-hero h1 { color: var(--white); font-size: clamp(2rem, 4.5vw, 3rem); }
