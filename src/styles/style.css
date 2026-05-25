@@ -74,7 +74,7 @@ section { scroll-margin-top: 96px; }
   font-weight: 600;
   font-size: 0.97rem;
   padding: 13px 24px;
-  border-radius: 8px;
+  border-radius: 4px;
   transition: background 0.15s var(--ease), border-color 0.15s var(--ease), color 0.15s var(--ease), transform 0.08s var(--ease);
   white-space: nowrap;
 }
@@ -185,9 +185,7 @@ section { scroll-margin-top: 96px; }
   position: absolute;
   inset: 0;
   z-index: 1;
-  background:
-    radial-gradient(circle at 82% 18%, rgba(145, 187, 67, 0.30), transparent 46%),
-    linear-gradient(180deg, rgba(20, 22, 18, 0.55), rgba(20, 22, 18, 0.80));
+  background: rgba(20, 22, 18, 0.72);
 }
 .hero .container { position: relative; z-index: 2; }
 .hero-grid {
@@ -282,7 +280,7 @@ section { scroll-margin-top: 96px; }
 .svc-icon {
   width: 56px;
   height: 56px;
-  border-radius: 12px;
+  border-radius: 4px;
   background: var(--green);
   display: flex;
   align-items: center;
@@ -442,7 +440,7 @@ section { scroll-margin-top: 96px; }
 
 /* ---------- CTA banner ---------- */
 .cta-banner {
-  background: linear-gradient(120deg, var(--green-dark), var(--green));
+  background: var(--green);
   color: var(--white);
   border-radius: 20px;
   padding: 52px 48px;
