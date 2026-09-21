@@ -9,23 +9,27 @@ interface Props {
   title: string;
   description: string;
   active?: 'home' | 'services' | 'about' | 'contact';
+  noindex?: boolean;
 }
 
-const { title, description, active } = Astro.props;
+const { title, description, active, noindex = false } = Astro.props;
 const site = Astro.site ?? new URL('https://topekatotalauto.com');
+const homeUrl = new URL('/', site).href;
 const canonical = new URL(Astro.url.pathname, site).href;
 const ogImage = new URL('/assets/img/banner.jpg', site).href;
 
 const businessSchema = {
   '@context': 'https://schema.org',
   '@type': 'AutoRepair',
+  '@id': new URL('/#business', site).href,
   name: 'Total Turf & Auto',
   image: ogImage,
   logo: new URL('/assets/img/logo.jpg', site).href,
-  url: canonical,
+  url: homeUrl,
   telephone: '+1-785-925-4040',
   email: 'totalturfandauto@gmail.com',
   priceRange: '$$',
+  sameAs: ['https://www.facebook.com/profile.php?id=61580966125252'],
   description:
     'Full-service auto and diesel repair shop in Topeka, Kansas, offering routine maintenance, vehicle inspections, brake service, engine replacement and diesel repair.',
   address: {
@@ -36,8 +40,13 @@ const businessSchema = {
     postalCode: '66617',
     addressCountry: 'US',
   },
-  geo: { '@type': 'GeoCoordinates', latitude: 39.09, longitude: -95.692 },
-  areaServed: ['Topeka', 'Shawnee County', 'North Topeka', 'Silver Lake', 'Rossville'],
+  geo: { '@type': 'GeoCoordinates', latitude: 39.095166, longitude: -95.663967 },
+  areaServed: [
+    { '@type': 'City', name: 'Topeka', addressRegion: 'KS', addressCountry: 'US' },
+    { '@type': 'AdministrativeArea', name: 'Shawnee County', addressRegion: 'KS', addressCountry: 'US' },
+    { '@type': 'City', name: 'Silver Lake', addressRegion: 'KS', addressCountry: 'US' },
+    { '@type': 'City', name: 'Rossville', addressRegion: 'KS', addressCountry: 'US' },
+  ],
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -57,7 +66,7 @@ const businessSchema = {
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
   <meta name="theme-color" content="#91bb43" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content={title} />

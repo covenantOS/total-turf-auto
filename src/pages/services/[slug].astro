@@ -8,6 +8,31 @@ export function getStaticPaths() {
 
 const { service } = Astro.props;
 
+const site = Astro.site ?? new URL('https://topekatotalauto.com');
+const pageUrl = new URL(`/services/${service.slug}/`, site).href;
+const businessId = new URL('/#business', site).href;
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: service.name,
+  serviceType: service.name,
+  description: service.metaDescription,
+  url: pageUrl,
+  areaServed: { '@type': 'City', name: 'Topeka', addressRegion: 'KS', addressCountry: 'US' },
+  provider: { '@id': businessId },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', site).href },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: new URL('/services/', site).href },
+    { '@type': 'ListItem', position: 3, name: service.name, item: pageUrl },
+  ],
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -21,6 +46,8 @@ const faqSchema = {
 const others = services.filter((s) => s.slug !== service.slug);
 ---
 <BaseLayout title={service.metaTitle} description={service.metaDescription} active="services">
+  <script type="application/ld+json" slot="schema" set:html={JSON.stringify(serviceSchema)} />
+  <script type="application/ld+json" slot="schema" set:html={JSON.stringify(breadcrumbSchema)} />
   <script type="application/ld+json" slot="schema" set:html={JSON.stringify(faqSchema)} />
 
   <!-- ===== Page hero ===== -->

@@ -4,5 +4,13 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://topekatotalauto.com',
-  integrations: [sitemap()],
+  trailingSlash: 'always',
+  integrations: [
+    sitemap({
+      serialize(item) {
+        item.lastmod = new Date();
+        return item;
+      },
+    }),
+  ],
 });
