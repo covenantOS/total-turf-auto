@@ -13,17 +13,17 @@
 
 ## Services
 
-- [Routine Maintenance](https://www.totalturfandauto.com/services#maintenance): Oil changes, fluids, filters, tune-ups, and factory-scheduled service.
-- [Diesel Repair](https://www.totalturfandauto.com/services#diesel): Diagnostics, maintenance, and repairs for diesel trucks.
-- [Brakes & Tires](https://www.totalturfandauto.com/services#brakes): Brake pads, rotors, tire rotation, balancing, and alignment checks.
-- [Engine Service & Replacement](https://www.totalturfandauto.com/services#engine): Check-engine diagnostics, engine repairs, and complete engine replacement.
-- [Vehicle Inspections](https://www.totalturfandauto.com/services#inspections): Thorough multi-point and pre-purchase inspections.
-- [Diagnostics & Electrical](https://www.totalturfandauto.com/services#diagnostics): Computer diagnostics, battery, starting, charging, and electrical repairs.
+- [Routine Maintenance](https://topekatotalauto.com/services#maintenance): Oil changes, fluids, filters, tune-ups, and factory-scheduled service.
+- [Diesel Repair](https://topekatotalauto.com/services#diesel): Diagnostics, maintenance, and repairs for diesel trucks.
+- [Brakes & Tires](https://topekatotalauto.com/services#brakes): Brake pads, rotors, tire rotation, balancing, and alignment checks.
+- [Engine Service & Replacement](https://topekatotalauto.com/services#engine): Check-engine diagnostics, engine repairs, and complete engine replacement.
+- [Vehicle Inspections](https://topekatotalauto.com/services#inspections): Thorough multi-point and pre-purchase inspections.
+- [Diagnostics & Electrical](https://topekatotalauto.com/services#diagnostics): Computer diagnostics, battery, starting, charging, and electrical repairs.
 
 ## Pages
 
-- [Home](https://www.totalturfandauto.com/)
-- [Services](https://www.totalturfandauto.com/services)
-- [About](https://www.totalturfandauto.com/about)
-- [Reviews](https://www.totalturfandauto.com/reviews)
-- [Contact](https://www.totalturfandauto.com/contact)
+- [Home](https://topekatotalauto.com/)
+- [Services](https://topekatotalauto.com/services)
+- [About](https://topekatotalauto.com/about)
+- [Reviews](https://topekatotalauto.com/reviews)
+- [Contact](https://topekatotalauto.com/contact)

@@ -11,4 +11,4 @@ Allow: /
 User-agent: Google-CloudVertexBot
 Allow: /
 
-Sitemap: https://www.totalturfandauto.com/sitemap-index.xml
+Sitemap: https://topekatotalauto.com/sitemap-index.xml
